@@ -1,0 +1,81 @@
+body {
+    background: #f8f8f8;
+}
+
+#log_in {
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+/* ----logo---- */
+
+.logo {
+    width: 100%;
+    height: 83px;
+    box-sizing: border-box;
+}
+
+.logo img {
+    width: 200px;
+    height: 39px;
+    margin-top: 24px;
+}
+
+
+/* ----main---- */
+
+.main {
+    width: 100%;
+    height: 450px;
+    box-sizing: border-box;
+    border: 5px solid #f0f0f0;
+    background: #fff;
+}
+
+.left {
+    float: left;
+    width: 600px;
+    height: 440px;
+}
+
+.left img{
+    width: 440px;
+    height: 310px;
+    margin: 65px 80px;
+}
+
+.right {
+    float: left;
+}
+
+/* ----txt---- */
+
+.txt {
+    width: 100%;
+    margin-top: 71px;
+}
+
+.txt p {
+    text-align: center;
+    font-size: 11px;
+    color: #676767;
+    line-height: 23px;
+}
+
+.txt .p1:hover {
+    color: red;
+}
