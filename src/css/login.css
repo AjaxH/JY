@@ -52,7 +52,7 @@ body {
     height: 440px;
 }
 
-.left img{
+.left img {
     width: 440px;
     height: 310px;
     margin: 65px 80px;
@@ -60,6 +60,88 @@ body {
 
 .right {
     float: left;
+    width: 362px;
+    height: 430px;
+    margin-top: 10px;
+    margin-right: 18px;
+    position: relative;
+}
+
+.massage {
+    width: 301px;
+    height: 22px;
+}
+
+.massage img {
+    float: right;
+}
+
+.right .QR{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.rapid {
+    margin-top: 8px;
+    height: 12px;
+}
+
+.rapid .rap1 {
+    font-size: 12px;
+    line-height: 12px;
+}
+
+.rapid .rap2 {
+    font-size: 12px;
+    line-height: 12px;
+    margin-left: 20px;
+}
+
+.infrom {
+    width: 307px;
+}
+
+.if1 {
+    margin-top: 18px;
+    font-size: 14px;
+    height: 15px;
+}
+
+.fr a {
+    color: red;
+}
+
+.accn {
+    width: 305px;
+    height: 36px;
+    border: 1px solid #e2e2e2;
+    margin-top: 13px;
+    font-size: 14px;
+    color: #999;
+    line-height: 36px;
+}
+
+.autologin {
+    margin-top: 30px;
+    font-size: 14px;
+    height: 15px;
+}
+
+.pw {
+    margin-top: 18px;
+    font-size: 14px;
+    height: 15px;
+}
+
+.login input{
+    width: 305px;
+    height: 40px;
+    margin-top: 20px;
+    font-size: 14px;
+    background: #c40000;
+    color: #fff;
+    line-height: 36px;
 }
 
 /* ----txt---- */
