@@ -164,7 +164,7 @@ body {
 .sidelist-x-li .slid-height02,
 .sidelist-x-li .slid-height s,
 .sidelist-x-li .slid-height02 s {
-    background: url(https://img.j1.com/images/images1308/ico/slidelf.png?1234) 0 0 no-repeat;
+    background: url(../img/img_01/slidelf.png) 0 0 no-repeat;
 }
 
 .lay965 {
@@ -240,9 +240,32 @@ body {
     z-index: 0;
 }
 
+.slide-top .bd ul li {
+    position: absolute;
+    left: 0;
+    float: left;
+}
+
 .slide-top .bd img {
     width: 750px;
     height: 270px;
+}
+
+.smasilde .fd {
+    position: relative;
+    height: 100%;
+    z-index: 0;
+}
+
+.smasilde .fd ul li {
+    position: absolute;
+    left: 0;
+    float: left;
+}
+
+.smasilde .fd img {
+    width: 223px;
+    height: 231px;
 }
 
 .slide-top .prev,
@@ -272,12 +295,12 @@ body {
     width: 748px;
 }
 
-.left-slide .bd ul {
+.left-slide .cd ul {
     overflow: hidden;
     zoom: 1;
 }
 
-.left-slide .bd ul li {
+.left-slide .cd ul li {
     padding: 0 1px 0 2px;
     width: 245px;
     height: 142px;
@@ -287,11 +310,11 @@ body {
     display: _inline;
 }
 
-.left-slide .bd ul li.nom {
+.left-slide .cd ul li.nom {
     border-right: 1px solid #fff;
 }
 
-.left-slide .bd ul li img {
+.left-slide .cd ul li img {
     width: 245px;
     height: 140px;
 }
@@ -381,6 +404,38 @@ body {
     color: #fff;
 }
 
+.smasilde .zd {
+    height: 10px;
+    overflow: hidden;
+    position: absolute;
+    right: 80px;
+    bottom: 10px;
+    z-index: 1;
+}
+
+.smasilde .zd ul {
+    overflow: hidden;
+    zoom: 1;
+    float: left;
+}
+
+.smasilde .zd ul li {
+    float: left;
+    margin-right: 5px;
+    width: 10px;
+    height: 10px;
+    background: #939393;
+    cursor: pointer;
+    border-radius: 50%;
+    color: #fff;
+    font: 400 14px/22px "Arial";
+}
+
+.smasilde .zd ul li.on_hover {
+    background: #e4393c;
+    color: #fff;
+}
+
 .smasilde .bd {
     position: relative;
     height: 100%;
@@ -391,6 +446,8 @@ body {
     width: 223px;
     height: 231px;
 }
+
+
 
 .xlqg {
     height: 307px;
@@ -4067,6 +4124,7 @@ body {
     z-index: 2;
     width: 1000px;
     margin: 0 auto;
+    margin-top: 42px;
 }
 
 #container2 {
