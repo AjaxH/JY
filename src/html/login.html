@@ -36,20 +36,21 @@
                         </label>
                     </div>
                     <div class="infrom">
+                        <form></form>
                         <div class="if1 clearfix">
                             <div class="fl">账号</div>
                             <div class="fr">
-                                <a href="">免费注册</a>
+                                <a href="../html/reg.html">免费注册</a>
                             </div>
                         </div>
                         <div class="accn">
-                            <input type="text" placeholder="　邮箱/用户名/手机号" autocomplete="off">
+                            <input type="text" placeholder="　邮箱/用户名/手机号" autocomplete="off" name="userphone">
                         </div>
                         <div class="pw clearfix">
                             <div class="fl">密码</div>
                         </div>
                         <div class="accn">
-                            <input type="password" placeholder="　请输入密码" name="password2">
+                            <input type="password" placeholder="　请输入密码" name="password">
                         </div>
                         <div class="autologin claerfix">
                             <div class="fl">
@@ -78,7 +79,31 @@
             </div>
         </div>
     </div>
-
 </body>
-
+<script src="../lib/jquery-1.10.1.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+	    $('.login').click(function(){
+	        var phone = $("input[name='userphone']").val()
+	        var password = $("input[name='password']").val()
+	        $.ajax({
+				dataType:'jsonp',
+	            url: 'http://127.0.0.1:8000/api/login_handle',
+				data:{
+					phone:phone,
+					password:password
+				}
+	        })
+	    })
+	})		
+	function fn(str){
+		var code = str.code
+		if(code==200){
+			window.location.href = "index01.html";
+		}else{
+			alert(str.data)
+		}
+	}
+	
+</script>
 </html>

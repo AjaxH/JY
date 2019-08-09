@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>购物车页面_健一网</title>
+    <script src="../lib/jquery-1.10.1.min.js"></script>
+    <script src="../js/common.js"></script>
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/carts.css">
-    <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/buycar.css">
-    <script src="../lib/jquery-3.4.1.js"></script>
-    <script src="../lib/carts.js"></script>
+    <link rel="stylesheet" href="../css/car.css">
 </head>
 
 <body>
@@ -45,130 +45,552 @@
             </div>
         </div>
     </div>
-
-
-
-
-    <div>
-        <section class="cartMain">
-            <div class="cartMain_hd">
-                <ul class="order_lists cartTop">
-                    <li class="list_chk">
-                        <!--所有商品全选-->
-                        <input type="checkbox" id="all" class="whole_check">
-                        <label for="all"></label>
-                        全选
-                    </li>
-                    <li class="list_con">商品信息</li>
-                    <li class="list_info">商品参数</li>
-                    <li class="list_price">单价</li>
-                    <li class="list_amount">数量</li>
-                    <li class="list_sum">金额</li>
-                    <li class="list_op">操作</li>
+    <div class="tabs">
+        <div class="content">
+            <div class="d_div">购物车</div>
+        </div>
+    </div>
+    <div class="my_goods">
+        <div class="content">
+            <div class="goods_box">
+                <div class="goods_info"><input type="checkbox" name="lists" id="cheakall"> <span>全选</span>
+                    <p class="shop_inf">商品信息</p>
+                    <p class="price">单价(元)</p>
+                    <p class="num">数量</p>
+                    <p class="priceall">小计(元)</p>
+                    <p class="handle">操作</p>
+                    <div class="backlist"><span>返回</span></div>
+                </div>
+                <ul class="goods_list">
+                    <!-- <li class="clearfix">
+                            <input type="checkbox" name="one" id="shop_lis">
+                            <img src="../img/g1.jpg" alt="">
+                            <div class="font_li">
+                                <p class="shop_title">121313123</p>
+                                <p class="shop_guige">
+                                    <em>搭配:</em>
+                                    <span>50mg:5ml</span>
+                                    <em>规格:</em>
+                                    <span>50mg:5ml</span>
+                                </p>
+                            </div>
+                            <div class="price">222</div>
+                            <div class="jisuan">
+                                <a href="###">+</a>
+                                <input type="text">
+                                <a href="###">-</a>
+                            </div>
+                            <p class="allprice">2222</p>
+                            <p class="caozuo">
+                                <a href="###">删除</a>
+                            </p>
+                        </li> -->
                 </ul>
-            </div>
-
-
-
-
-            <div class="cartBox">
-                <div class="shop_info">
-                    <div class="all_check">
-                        <!--店铺全选-->
-                        <input type="checkbox" id="shop_c" class="shopChoice">
-                        <label for="shop_c" class="shop"></label>
-                    </div>
-                    <div class="shop_name">
-                        店铺：<a href="javascript:;">卷卷旗舰店</a>
-                    </div>
-                </div>
-                <div class="order_content">
-                    <ul class="order_lists">
-                        <li class="list_chk">
-                            <input type="checkbox" id="checkbox_8" class="son_check">
-                            <label for="checkbox_8"></label>
-                        </li>
-                        <li class="list_con">
-                            <div class="list_img"><a href="javascript:;"><img src="../img/img_02/1179_0.jpg" alt=""></a>
-                            </div>
-                            <div class="list_text"><a href="javascript:;">强生 稳豪倍易型 血糖仪(血糖仪+采血笔+便携包） 颜色随机（黑绿银蓝红粉色）</a>
-                            </div>
-                        </li>
-                        <li class="list_info">
-                            <p>规格：默认</p>
-                            <p>尺寸：16*16*3(cm)</p>
-                        </li>
-                        <li class="list_price">
-                            <p class="price">￥499</p>
-                        </li>
-                        <li class="list_amount">
-                            <div class="amount_box">
-                                <a href="javascript:;" class="reduce reSty">-</a>
-                                <input type="text" value="1" class="sum">
-                                <a href="javascript:;" class="plus">+</a>
-                            </div>
-                        </li>
-                        <li class="list_sum">
-                            <p class="sum_price">￥499</p>
-                        </li>
-                        <li class="list_op">
-                            <p class="del"><a href="javascript:;" class="delBtn">移除商品</a></p>
-                        </li>
-                    </ul>
-                    <ul class="order_lists">
-                        <li class="list_chk">
-                            <input type="checkbox" id="checkbox_9" class="son_check">
-                            <label for="checkbox_9"></label>
-                        </li>
-                        <li class="list_con">
-                            <div class="list_img"><a href="javascript:;"><img src="../img/img_02/114343_0_200x200.jpg"
-                                        alt=""></a></div>
-                            <div class="list_text"><a href="javascript:;">雅培 辅理善 越捷型血糖仪</a></div>
-                        </li>
-                        <li class="list_info">
-                            <p>规格：默认</p>
-                            <p>尺寸：16*16*3(cm)</p>
-                        </li>
-                        <li class="list_price">
-                            <p class="price">￥179</p>
-                        </li>
-                        <li class="list_amount">
-                            <div class="amount_box">
-                                <a href="javascript:;" class="reduce reSty">-</a>
-                                <input type="text" value="1" class="sum">
-                                <a href="javascript:;" class="plus">+</a>
-                            </div>
-                        </li>
-                        <li class="list_sum">
-                            <p class="sum_price">￥179</p>
-                        </li>
-                        <li class="list_op">
-                            <p class="del"><a href="javascript:;" class="delBtn">移除商品</a></p>
-                        </li>
-                    </ul>
+                <div class="noshop_div">
+                    <p>您的购物车空空的哦~</p>
+                    <p>去看看心仪的产品吧~</p>
+                    <div class="noshop_btns"><input type="button" value="去首页" id="goindex"> <button>去逛逛</button></div>
                 </div>
             </div>
-            <!--底部-->
-            <div class="bar-wrapper">
-                <div class="bar-right">
-                    <div class="piece">已选商品<strong class="piece_num">0</strong>件</div>
-                    <div class="totalMoney">共计: <strong class="total_text">0.00</strong></div>
-                    <div class="calBtn"><a href="javascript:;">结算</a></div>
+        </div>
+    </div>
+    <div class="last_caozuo">
+        <div class="content">
+            <div class="lasts_box"><input type="checkbox" name="lists" id="btn_check"> <span>全选</span> <a href="##"
+                    class="close_shop">删除选中的商品</a>
+                <div class="btns_box">
+                    <div class="goodnum">已选择 <i>0</i> 件商品</div>
+                    <div class="goodprice"><em>总价:</em> <span>￥:0</span></div><a href="##" class="last_jisuan">去结算</a>
                 </div>
             </div>
-        </section>
-        <section class="model_bg"></section>
-        <section class="my_model">
-            <p class="title">删除宝贝<span class="closeModel">X</span></p>
-            <p>您确认要删除该宝贝吗？</p>
-            <div class="opBtn"><a href="javascript:;" class="dialog-sure">确定</a><a href="javascript:;"
-                    class="dialog-close">关闭</a></div>
-        </section>
-
-
+        </div>
     </div>
 
 
+
+
+
+
 </body>
+<script>
+    (function () {
+        //-----------------------------登录功能---------------------------
+
+        //登录
+        let usname = getCookie('name');
+        $('.top_login span').html('欢迎' + usname + '来到健客网上药店');
+        $('.index_a').click(function () {
+            location.href = 'index.html';
+        })
+        $('.index_a').css('padding', "0px 10px");
+        //返回列表页
+        $('.backlist').click(function () {
+            history.go(-1);
+        })
+
+        //刷新页面
+        function refresh() {
+            if (usname) {
+                $('#login').hide();
+                $('#loginout').show();
+                $('#azhuce').hide();
+            } else {
+                $('#login').show();
+                $('#loginout').hide();
+                $('#azhuce').show();
+                $('.top_login span').html('欢迎来到健客网上药店！');
+                $('.noshop_div').show();
+            }
+
+
+
+            $('#login').click(function () {
+                setCookie('url', location.href, 1);
+                location.href = 'login.html';
+            });
+
+            $('#azhuce').click(function () {
+                location.href = 'reg.html';
+            });
+
+            $('#loginout').click(function () {
+                removeCookie('name');
+                $('#login').show();
+                $('#azhuce').show();
+                $('#loginout').hide();
+                $('.hint_box').show();
+                $('.top_login span').html('欢迎来到健客网上药店！');
+                let one_html = `<li></li>`;
+                $('.noshop_div').show();
+                $('.goods_list').html(one_html);
+            })
+        }
+        refresh();
+
+
+
+
+
+
+
+
+
+        //如果没商品的事件
+        //-------------------------------------------------------------------
+        $('#goindex').click(function () {
+            location.href = 'index.html';
+        })
+        $('.noshop_btns button').click(function () {
+            location.href = 'list.html';
+        })
+
+
+
+
+
+
+
+
+        //提示登陆框的出现--------------------------------------------
+
+        if (getCookie('name')) {
+            $('.hint_box').hide();
+        } else {
+            $('.hint_box').show();
+        }
+
+        $('.hint_box button').click(function () {
+            location.href = 'login.html';
+        })
+
+
+
+
+
+
+
+
+
+
+        //购物车数据渲染
+        //----------------------------------------------------------------------
+
+        console.log(getCookie('name'));
+        if (getCookie('name')) {
+            function init() {
+                jQuery.ajax({
+                    type: 'post',
+                    url: '../api/goods.php',
+                    data: 'name=' + getCookie('name') + '&a=0',
+                    success: function (str) {
+                        let arr = JSON.parse(str);
+                        console.log(arr)
+                        let one_html = arr.list.map(function (item) {
+                            return `<li class="clearfix" data-id="${item.id}">
+                        <input type="checkbox" name="one" id="shop_lis">
+                        <img src="${item.imgurl}" alt="">
+                        <div class="font_li">
+                            <p class="shop_title">${item.title}</p>
+                            <p class="shop_guige">
+                                <em class="Dpei">搭配:</em>
+                                <span class="Dpei_val">${item.collocation}</span><br>
+                                <em class="Gge">规格:</em>
+                                <span class="Gge_val">${item.standard}</span>
+                            </p>
+                        </div>
+                        <div class="price">${item.price}</div>
+                        <div class="jisuan">
+                            <a href="###" class="jian">-</a>
+                            <input class="num_num" type="text" value="${item.num}" data-kucun="${item.oldprice}">
+                            <a href="###" class="add">+</a>
+                        </div>
+                        <p class="allprice">${((item.price) *(item.num)).toFixed(2)}</p>
+                        <p class="caozuo">
+                            <a href="###">删除</a>
+                        </p>
+                    </li>`
+
+                        }).join('');
+                        $('.goods_list').html(one_html);
+
+                        if ($('.goods_list li').size() == 0) {
+                            $('.noshop_div').show();
+                        } else {
+                            $('.noshop_div').hide();
+                        }
+
+
+                    }
+
+                })
+            }
+            init();
+        }
+
+
+
+
+
+
+
+
+
+
+
+        //购物车按钮功能
+        //--------------------------------------------------------------------------------------
+
+
+
+        let name = ''; //用户名
+        let id = ''; //商品id
+        let num = ''; //商品数量
+        let a = 0; //用来判断PHP语言分支参数
+        let collocation = ''; //商品大搭配值
+        let standard = ''; //商品规格值
+
+
+
+
+
+        //加,减,删除,手动输入改变数据库内容封装函数
+
+        function ajaxS() {
+            jQuery.ajax({
+                type: 'post',
+                url: '../api/btns.php',
+                data: {
+                    'num': num,
+                    'name': name,
+                    'id': id,
+                    'a': a,
+                    'collocation': collocation,
+                    'standard': standard
+                },
+                success: function (str) {
+                    console.log('改变了');
+                }
+            })
+        }
+        ajaxS();
+
+
+
+        //数量点击增加1
+        $('.goods_list').on('click', '.add', function () {
+            num = $(this).prev().val();
+            let kucun = $(this).prev().data('kucun');
+            // console.log(kucun);
+            num++;
+            if (num >= kucun) {
+                num = kucun;
+                alert('已经没有更多的了');
+            }
+            $(this).prev().val(num);
+            commodityPrice($(this));
+
+            name = getCookie('name');
+            id = $(this).parent().parent().data('id');
+            a = 1;
+            ajaxS();
+
+        })
+
+        //数量点击减少1
+        $('.goods_list').on('click', '.jian', function () {
+            num = $(this).next().val();
+            num--;
+            if (num < 1) {
+                num = 1;
+                alert('数量最少为1');
+            }
+            $(this).next().val(num);
+            commodityPrice($(this));
+
+            name = getCookie('name');
+            id = $(this).parent().parent().data('id');
+            a = 1;
+            // console.log(id);
+            // console.log(num);
+            ajaxS();
+        })
+
+        //手动输入改变
+        $('.goods_list').on('input', '.num_num', function () {
+            num = $(this).val();
+            let kucun = $(this).data('kucun');
+            if (num < 1) {
+                num = 1;
+            } else if (num > kucun) {
+                num = kucun;
+            }
+            $(this).val(num);
+            commodityPrice($(this));
+
+            name = getCookie('name');
+            id = $(this).parent().parent().data('id');
+            a = 1;
+            ajaxS();
+        })
+
+        //总价：单价 * 数量
+        function commodityPrice(now) {
+            let price = $(now).parent().prev().text(); //单价
+            let num = $(now).parent().find('.num_num').val(); //数量
+            let total = (price * num).toFixed(2); //总价
+            $(now).parent().next().html(total);
+            select();
+        }
+
+        //删除当行商品
+        $('.goods_list').on('click', '.caozuo a', function () {
+            let res = confirm('确认删除吗？');
+            if (res) {
+
+                collocation = $(this).parent().parent().find($('.Dpei_val')).text();
+                standard = $(this).parent().parent().find($('.Gge_val')).text();
+                console.log(collocation)
+                name = getCookie('name');
+                id = $(this).parent().parent().data('id');
+                a = 2
+                ajaxS();
+
+                $(this).parent().parent().remove();
+
+                if ($('.goods_list li').size() == 0) {
+                    $('.noshop_div').show();
+                } else {
+                    $('.noshop_div').hide();
+                }
+            }
+            select();
+
+        })
+
+
+
+        //全选
+        $('#btn_check').click(function () {
+            if ($('#btn_check').prop('checked') == true) {
+                $('.goods_list li').css('background', '#F3FBFE');
+            } else {
+                $('.goods_list li').css('background', '#fff');
+            }
+            let now = $(this).prop('checked');
+            $('.goods_list #shop_lis').prop('checked', now);
+            $('#cheakall').prop('checked', now);
+            select();
+        })
+        $('#cheakall').click(function () {
+            if ($('#cheakall').prop('checked') == true) {
+                $('.goods_list li').css('background', '#F3FBFE');
+            } else {
+                $('.goods_list li').css('background', '#fff');
+            }
+            let now = $(this).prop('checked');
+            $('.goods_list #shop_lis').prop('checked', now);
+            $('#btn_check').prop('checked', now);
+            select();
+        })
+
+
+
+
+        //通过单选控制全选
+        $('.goods_list').on('click', '#shop_lis', function () {
+            if ($(this).prop('checked') == true) {
+                $(this).parent().css('background', '#F3FBFE');
+            } else {
+                $(this).parent().css('background', '#fff');
+            }
+            let checkNum = $('.goods_list #shop_lis:checked').size();
+            let num = $('.goods_list #shop_lis').size();
+            if (checkNum == num) {
+                $('#cheakall').prop('checked', true);
+                $('#btn_check').prop('checked', true);
+            } else {
+                $('#cheakall').prop('checked', false);
+                $('#btn_check').prop('checked', false);
+            }
+            select();
+        })
+
+
+
+
+        //数量和总价的变化
+        function allPrice() {
+            let arr = []; //存放被勾选的下标
+            $('.goods_list #shop_lis').each(function (i, item) {
+                if ($(item).prop('checked')) {
+                    arr.unshift(i);
+                }
+            })
+            //降序
+            arr.sort(function (a, b) {
+                return b - a;
+            });
+            return arr;
+        }
+
+
+
+        //判断哪一行被勾选
+        function select() {
+            let arr = allPrice();
+
+            //计算总数和总价
+            let sum = 0;
+            let allprice = 0;
+            arr.forEach(function (item) {
+                sum += $('.num_num').eq(item).val() * 1;
+                allprice += $('.allprice').eq(item).text() * 1;
+            })
+            // console.log(sum);
+            $('.goodnum i').html(sum);
+            $('.goodprice span').html(allprice);
+        }
+
+        //全删
+        $('.close_shop').click(function () {
+            let arr = allPrice();
+
+            if ($('.goods_list #shop_lis:checked').size()) {
+                let res = confirm('确定删除吗?');
+                // console.log(arr);
+                if (res) {
+                    arr.forEach(function (item) {
+
+                        collocation = $('.goods_list li').eq(item).find($('.Dpei_val')).text();
+                        standard = $('.goods_list li').eq(item).find($('.Gge_val')).text();
+                        name = getCookie('name');
+                        id = $('.goods_list li').eq(item).data('id');
+                        a = 2
+                        ajaxS();
+                        $('.goods_list li').eq(item).remove();
+
+                        if ($('.goods_list li').size() == 0) {
+                            $('.noshop_div').show();
+                        } else {
+                            $('.noshop_div').hide();
+                        }
+                    })
+                }
+            } else {
+                alert('请选择要删除的商品信息!');
+            }
+
+            select();
+        })
+
+        //结算
+        $('.last_jisuan').click(function () {
+            if ($('.goods_list #shop_lis:checked').size() == 0) {
+                alert('请选择结算商品!');
+            } else {
+                $('.money_box').show();
+            }
+        })
+
+        //结算页面的功能
+        $('.money_close').click(function () {
+            $('.money_box').hide();
+        })
+
+
+
+
+
+
+
+
+
+
+        //-foot部分渲染------------------------------------------------------------------------------
+
+        //link假数据
+        let link = [{
+            dt: '关于健客',
+            dd: ['健客简介', '资质荣誉', '加入我们', '联系我们', '广告合作']
+        }, {
+            dt: '支付配送方式',
+            dd: ['货到付款', '第三方网上支付', '免费退换', '配送范围和收费', '商品签收注意']
+        }, {
+            dt: '帮助中心',
+            dd: ['购物指南', '订单处理', '退换原则', '退换方式', '电话查真伪']
+        }]
+
+        let link_html = link.map(function (item) {
+            let dl_html = item.dd.map(function (item1) {
+                return `<dd>${item1}</dd>`
+            }).join('');
+            return `<dl>
+                        <dt>${item.dt}</dt>
+                        ${dl_html}
+                    </dl>`
+        }).join('');
+        $('.foot_boxleft').html(link_html);
+
+
+        let cellphone = ['手机平台', '健客医生', '健客网上药店', '手机糖宝', '健客问医生', '男人加油站', '护肤小贴士', '健客微商城'];
+        let cellphone_html = cellphone.map(function (item) {
+            return `<li>
+                        <em></em>
+                        <span>${item}</span>
+                    </li>`
+        }).join('');
+        $('.cellphone_platform').html(cellphone_html);
+
+
+        let attention = ['关注我们', '微博', 'QQ空间', '微信'];
+        let attention_html = attention.map(function (item) {
+            return `<li>
+                        <em></em>
+                        <span>${item}</span>
+                    </li>`
+        }).join('');
+        $('.attention').html(attention_html);
+    })();
+</script>
 
 </html>

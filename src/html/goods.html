@@ -1,0 +1,1772 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../lib/jquery-1.10.1.min.js"></script>
+    <script src="../js/common.js"></script>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/goods.css">
+    <link rel="stylesheet" href="../css/goodone.css">
+    <link rel="stylesheet" href="../css/goodtwo.css">
+</head>
+
+<body>
+    <div style="width: 100%; background: #ffffff; margin: 0px; padding: 0px;">
+        <!--顶部 start -->
+        <div class="j11308_top" id="secaibei">
+            <div class="j11308_width_1000">
+                <div class="j11308_top_left">
+                    <a rel="nofollow" href="">收藏健一医药网</a><span>|</span><a rel="nofollow" href=""
+                        onClick="setHome()">设为首页</a>
+                </div>
+                <div class="j11308_inside4">
+                    <ul class="j11308_top_right1">
+                        <li style="background: none;">全国热线：<strong class="j11308_font01"> 4007-800-800</strong></li>
+                        <li class="menu-sjjy"><a href="#" class="tit-sj">手机健一<em></em></a> <i></i> <span
+                                class="outline"></span>
+                            <div class="download-doct" id="dropDownBox"></div>
+                        </li>
+                        <li style="padding: 0 3px;">
+                            <div id="j11308_navbox" class="j11308_menu">
+                                <a class="tit" href="#">网站导航<b></b></a>
+                                <ul class="subnav">
+                                    <li><a href="" title="健康谈">健康谈</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a rel="nofollow" style="cursor: pointer;"
+                                href="https://www.j1.com/myec/view/orderChange.html">我的订单</a></li>
+                        <li class="j11308_top_menu_link" id="logininfo">您好，欢迎来到健一网
+                            <h1>网上药店</h1>！
+                        </li>
+                        <input type="hidden" id="hidBackURL" />
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--顶部 end-->
+        <!--头部 topbanner -->
+        <div class="j11308_width1" adid="14"></div>
+        <!--头部 start -->
+        <div class="j11308_header j11308_width_1000">
+            <div class="j11308_header_logo">
+                <a href="https://www.j1.com/" target="_blank"><img src="https://img.j1.com/images/images1308/logo.gif"
+                        alt="健一网网上药店" width="199" height="41" /></a>
+            </div>
+            <div class="j11308_inside1" adid="15"></div>
+            <div class="j11308_inside2">
+                <div class="j11308_form1">
+                    <input type="text" class="j11308_inside_input_text1" id="searchInput" value="请输入关键字:商品名或症状或疾病名"
+                        onclick="clearValue();" onkeydown="bindEnter(event,function(){search();})"
+                        onblur="hideautopoint()" /> <input name="" type="button" value="" class="search_btn"
+                        onClick="search();" />
+                </div>
+                <div class="j11308_header_search2">
+                    <a href="">七夕</a>
+                    <a href="">母婴</a>
+                    <a href="">发烧日</a>
+                    <a href="">酒杯</a>
+                    <a href="">琦礼</a>
+                    <a href="">宙斯</a>
+                    <a href="">花旗参</a>
+                    <a href="">迪士尼</a>
+                    <a href="">血橙</a>
+                    <a href="">舒华</a>
+                </div>
+            </div>
+            <div class="j11308_inside3">
+                <div id="j11308_login" class="j11308_login_menu">
+                    <div class="j11308_login_ico1"></div>
+                    <div class="xljt01"></div>
+                    <a rel="nofollow" class="j11308_login_tit" style="cursor: pointer;"
+                        onclick='beginloginrove("/myec/view/orderChange.html");'>我的健一网</a>
+                    <ul class="j11308_login_subnav">
+                        <li><a rel="nofollow" target="_blank" style="cursor: pointer;"
+                                onclick='beginloginrove("/myec/view/orderChange.html");'>我的订单</a></li>
+                        <li><a rel="nofollow" target="_blank" style="cursor: pointer;"
+                                onclick='beginloginrove("/comment/view/evaluations.html");'>我的评价</a></li>
+                        <li><a rel="nofollow" target="_blank" style="cursor: pointer;"
+                                onclick='beginloginrove("/memberIntegralLog/view/getPage/1.html");'>我的积分</a></li>
+                    </ul>
+                </div>
+                <div class="j11308_header_login_right" shopcartPattern="gouwu">
+                    <span class="gwtb"></span> <span class="j11308_header_login_right1"></span><a rel="nofollow"
+                        onclick="link_goto_settlement_head();" title="购物车" target="_blank"
+                        href="https://www.j1.com/shopcart.html?time=1565148790923">购物车</a>
+                    <div class="j11308_header_login_right2">
+                        <span id="cartCount">0</span>
+                    </div>
+                </div>
+                <div class="j11308_header_login_right" shopcartPattern="yuyue">
+                    <span class="gwtb"></span> <span class="j11308_header_login_right1"></span><a rel="nofollow"
+                        onclick="link_goto_settlement_head();" title="预约清单" target="_blank"
+                        href="https://www.j1.com/reservationList.html?time=1565148790923">预约清单</a>
+                    <div class="j11308_header_login_right2">
+                        <span id="reservationCount">0</span>
+                    </div>
+                </div>
+                <!-- 购物车 start -->
+                <div class="newest" id="shopcartDiv"></div>
+            </div>
+        </div>
+        <!-- 头部end -->
+        <!-- 返回顶部 -->
+        <a href="#" id="toTop"></a>
+        <!-- 在线客服改版 st -->
+        <div class="swt_525">
+            <ul>
+                <li class="zxzx-m">
+                    <a href="javascript:;" class="k-1"><img height="159" width="37" alt="在线咨询"
+                            src="https://img02.j1.com/images/images1308/ico/swt_01.png"></a>
+                    <div class="pf">
+                        <div class="swt-sqsh">
+                            <a onclick="NTKF.im_openInPageChat('hr_1009_1513925616442')" target="_blank"><img
+                                    src="https://img02.j1.com/images/images1308/ico/swt_02.jpg" alt="售前咨询" />
+                            </a>
+                            <a onclick="NTKF.im_openInPageChat('hr_1009_1513925616442')" target="_blank"><img
+                                    src="https://img02.j1.com/images/images1308/ico/swt_03.jpg" alt="售后咨询" /></a>
+                            <div class="swt-time">
+                                <p>全国咨询热线</p>
+                                <strong>4007-800-800</strong>
+                                <p>（8:30-21:00）</p>
+                            </div>
+                        </div>
+                        <div class="sjj"></div>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:;" class="k-1"><img height="36" width="37" alt="微信"
+                            src="https://img02.j1.com/images/images1308/ico/smwx_03.gif"></a>
+                    <div class="pf">
+                        <div class="wx_ico"><img src="https://img02.j1.com/images/images1308/ico/smwx_01.jpg" alt="" />
+                        </div>
+                        <div class="sjj sjj_02"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- <script>
+            $(".swt_525 li").hover(function () {
+                $(this).children(".pf").show()
+            }, function () {
+                $(this).children(".pf").hide()
+            });
+            $(window).bind("scroll resize", function () {
+                var winWidth = $(window).width();
+                if (winWidth > 400 && $(window).scrollTop() > 400) {
+                    $('#toTop').slideDown("slow");
+                } else {
+                    $('#toTop').slideUp("slow");
+                }
+            });
+            //手机
+            $(".menu-sjjy").hover(function () {
+                console.log($("#dropDownBox").html().length);
+                if ($("#dropDownBox").html() == "") {
+                    $.ajax({
+                        url: appPath + "/showDowpDownBox.html",
+                        type: "POST",
+                        success: function (data) {
+                            $("#dropDownBox").html(data);
+                        }
+                    });
+                }
+                $(this).addClass('kl').find('.download-doct').show()
+            }, function () {
+                $(this).removeClass('kl').find('.download-doct').hide()
+            });
+        </script> -->
+
+    </div>
+    <!-- 公共弹窗 -->
+    <div class="glotc-bg1"></div>
+    <div class="glotc-main1">
+        <div class="glotc-tit">
+            <span id="glotcTitle">信息提示</span><a href="javascript:;" onclick="ggtcColse()" class="glo-close">close</a>
+        </div>
+        <div class="glo-text">
+            <div class="hi85">
+                <h5>亲爱的用户：</h5>
+                <p>
+                    <span id="glotcValue">是否确定？</span>
+                </p>
+            </div>
+            <div class="glo-bt">
+                <a href="javascript:;" name="ggtcBtn" action="ok" class="bt-c4">确定</a> <a href="javascript:;"
+                    name="ggtcBtn" action="no">取消</a> <a href="javascript:;" name="ggtcBtn" action="close">关闭</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="clear"></div>
+    <div class="j11308_nav_frame">
+        <div class="j11308_nav j11308_width_1000">
+            <div class="j11308_nav_left" style="height: 40px;overflow: hidden;">
+                <a id="allNav" href="https://www.j1.com/sitemap.html" target="_blank">全部商品分类</a>
+            </div>
+            <div class="j11308_inside_nav">
+                <ul class="j11308_nav_menu1">
+
+
+                    <li><a target="_blank" href="https://www.j1.com/" title="健一网网上药店">首页</a>
+                    </li>
+
+                    <li><a target="_blank" href="https://www.j1.com/pd-yaopin.html" title="专科药品">专科药品</a>
+
+                        <img src="https://img.j1.com/images/images1308/ico/hot.gif" class="new-ico" />
+                    </li>
+
+                    <li><a target="_blank" href="https://www.j1.com/activity/czrm.html" title="超值热卖">超值热卖</a>
+
+                        <img src="https://img.j1.com/images/images1308/ico/new.gif" class="new-ico" />
+                    </li>
+
+                    <li><a target="_blank" href="https://www.j1.com/activity/js.html">基因检测</a>
+
+                        <img src="https://img.j1.com/images/images1308/ico/new.gif" class="new-ico" />
+                    </li>
+
+
+
+                </ul>
+            </div>
+        </div>
+        <div id="cataLogMapDiv" style="position: relative; margin: 0 auto;z-index:100;width: 1200px;">
+        </div>
+    </div>
+    <style>
+        .productarea-right-1 h1 .df {
+            background: url(https://img02.j1.com/images/images1308/ico/xqdf.gif) 0 0 no-repeat;
+            display: inline-block;
+            vertical-align: middle;
+            width: 8px;
+            height: 8px;
+            margin-right: 5px;
+        }
+    </style>
+    <div id="listpagecontent">
+        <ul class="list_1">
+            <div class="content clearfix">
+                <li class="list_1lis">首页></li>
+                <li class="list_2lis">返回列表页></li>
+                <li>健一热卖></li>
+                <li class="list_4lis">血糖仪</li>
+            </div>
+        </ul>
+        <div class="goods">
+            <div class="content">
+                <div class="good_left">
+                    <div class="pic_box">
+                        <div class="b_imgbox"><img src="" alt="" id="b_pic">
+                            <div class="zhezhao"></div>
+                        </div>
+                        <ul class="s_pic clearfix">
+                            <li><img src="" alt="" id="small_pic"></li>
+                        </ul>
+                    </div>
+                    <div class="hidden_box"><img src="" alt=""></div>
+                    <div class="title"><span>温馨提示：</span> 图片均为健客对原品的真实拍摄，仅供参考；如遇新包装上市可能存在更新滞后，请以实物为准！</div>
+                    <div class="addmore">收藏商品</div>
+                </div>
+                <div class="good_right">
+                    <div class="right_h3">
+                        <h3></h3>
+                    </div>
+                    <div class="p_div">益气健脾，养阴清热，生津止渴。用于气阴两虚者，症见神疲乏力，呼吸气短，五心烦热，口干咽燥，食欲减退，心悸失眠。</div>
+                    <p class="down"><span>【戳我下载APP 立省1000元】</span> <i></i></p>
+                    <div class="dl_div"><span>通用名称:</span>
+                        <p class="p1"></p>
+                    </div>
+                    <div class="dl_div"><span>产品编号:</span>
+                        <p class="p2"></p>
+                    </div>
+                    <div class="dl_div"><span>批准文号:</span>
+                        <p class="p3"></p><a href="##">（国家食药总局查询）</a>
+                    </div>
+                    <div class="dl_div"><span>商品评分:</span>
+                        <p class="p4">(已有23人评价)</p>
+                    </div>
+                    <div class="dl_div"><span>健客价格:</span>
+                        <p class="price"></p>
+                    </div>
+                    <div class="con_div"><span>建议搭配:</span>
+                        <div class="a_box" id="btnbox1"><a href="###" class="active">一件体验装<img style="display: block"
+                                    src="../img/img_04/duigou.png" alt=""></a><a href="###">*治阳痿搭配金戈(*治阳痿搭配金戈)<img
+                                    src="../img/img_04/duigou.png" alt=""></a><a href="###">*治早泄搭配必利劲(*治早泄搭配必利劲)<img
+                                    src="../img/img_04/duigou.png" alt=""></a></div>
+                    </div>
+                    <div class="dapei"><span>产品规格:</span>
+                        <div class="a_box" id="btnbox2"><a href="###" class="active">10ml*12支(口服液)<img
+                                    style="display: block" src="../img/img_04/duigou.png" alt=""></a><a
+                                href="###">15ml*8支(口服液)<img src="../img/img_04/duigou.png" alt=""></a></div>
+                    </div>
+                    <div class="changjia"><span>生产厂家:</span>
+                        <p>启迪古汉集团衡阳中药有限公司(原紫光古汉集团衡阳中药有限公司)</p>
+                    </div>
+                    <div class="btn_box"><span>数 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;量:</span> <input type="text"
+                            value="" id="num"> <a href="###" id="add">△</a> <a href="###" id="jian">▽</a> <span
+                            class="inf"></span>
+                        <div class="btn_3"><a href="###" id="add_shopping">加入购物车</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="listpagecontainer">
+
+                <div class="white_content" id="shopCartMessage"
+                    style="width: 320px; overflow: visible; _overflow: hidden; border: 1px solid #c40000; background: #fff; left: 43%; top: 45%; z-index: 200;">
+                    <div style="height: 30px; line-height: 30px; background: #c40000; padding: 2px; width: 316px;">
+                        <cite id="mssageTitle" class="fl addcart_title"><span id="sumcounts"></span>件商品加入购物车</cite>
+                        <a href="javascript:void(0);"
+                            onclick="document.getElementById('shopCartMessage').style.display='none';"
+                            class="fr addcart_close"><img src="https://img.j1.com/images/sc_icon_bg_4.png"
+                                alt="关闭" /></a>
+                    </div>
+                    <table width="90%" border="0" cellspacing="0" cellpadding="0" style="margin: 10px">
+                        <tr>
+                            <td width="30%" style="vertical-align: top"><img id="add-img" src="" width="58" height="58"
+                                    alt=" 强生 稳豪倍易型 血糖仪(血糖仪+采血笔+便携包） 颜色随机（黑绿银蓝红粉色）  " /></td>
+                            <td width="60%" style="line-height: 20px;">
+                                <p style="height: 40px; overflow: hidden"> 强生 稳豪倍易型 血糖仪(血糖仪+采血笔+便携包） 颜色随机（黑绿银蓝红粉色） </p>
+
+                                <p id="sku_show" style="color: red;">&nbsp;</p> 加入数量：<span
+                                    class="shopcart-tuijian-price02" id="counts"></span> <br /> 总计金额：<span
+                                    class="shopcart-tuijian-price02" id="sumPrice"></span> 元<br />
+                            </td>
+                        </tr>
+                    </table>
+                    <div id="shopcart-fly-end">
+                        <table width="90%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td width="100%" style="text-align: right; line-height: 30px;"><a
+                                        href="javascript:void(0);" onclick="goToPay('shopCartMessage')"><img
+                                            id="messageCancelBtn"
+                                            src="https://img.j1.com/images/listpage/btn-jxgw.gif" /></a> <a
+                                        href="javascript:void(0);"
+                                        onclick="goto_settlement_detail();shopChartContinue();">
+                                        <img id="messageOkBtn"
+                                            src="https://img.j1.com/images/listpage/btn-qjs.gif" /></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div id="listpagecontent">
+                    <div class="recommend"></div>
+                    <div class="zuhe">
+                        <ul>
+                            <li class="act">推荐商品
+                            </li>
+                            <li>人气组合
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="do clearfix">
+                        <div class="productcxsp tuijian">
+                            <div class="productcxsp-cp">
+                                <div class="productcxsp-cp1">
+                                    <a target="_blank"
+                                        href="https://www.j1.com/product/75943-84745.html#from=tj_goods_51560">
+                                        <img width="110" height="110"
+                                            src="https://img01.j1.com/upload/gs/20190619/75943_0_200x200.jpg"
+                                            alt=" 东阿阿胶 东阿阿胶 复方阿胶浆  20ml*48支 （无蔗糖）  "
+                                            title=" 东阿阿胶 东阿阿胶 复方阿胶浆  20ml*48支 （无蔗糖）  " onerror="dealwithErrImg(event)">
+                                    </a>
+                                </div>
+                                <div class="productcxsp-cp2">
+                                    <a target="_blank"
+                                        href="https://www.j1.com/product/75943-84745.html#from=tj_goods_51560"> 东阿阿胶
+                                        东阿阿胶
+                                        复方阿胶浆 20ml*48支 （无蔗糖） </a>
+                                </div>
+                                <div class="productcxsp-cp3">
+                                    <span class="productstyle7">￥ 468.00</span>
+                                </div>
+                                <div class="buy">
+                                    <a class="p-buy" target="_blank" href="javaScript:void(0)"
+                                        onclick="addMultiCart('84745,1,0')"><em class="gw"></em>加入购物车</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="productcxsp" style="display: none;">
+                            <div class="productcxsp-cp">
+                                <div class="productcxsp-cp1">
+                                    <img width="110" height="110" onerror="dealwithErrImg(event)"
+                                        src="https://img01.j1.com/upload/goods/200-200/1179/1179_0.jpg"
+                                        title=" 强生 稳豪倍易型 血糖仪(血糖仪+采血笔+便携包） 颜色随机（黑绿银蓝红粉色）  "
+                                        alt=" 强生 稳豪倍易型 血糖仪(血糖仪+采血笔+便携包） 颜色随机（黑绿银蓝红粉色）  " />
+                                </div>
+                                <div class="productcxsp-cp2"> 强生 稳豪倍易型 血糖仪(血糖仪+采血笔+便携包） 颜色随机（黑绿银蓝红粉色） </div>
+                            </div>
+                            <div class="productcxsp-fh">
+                                <img class="productcxsp-fhimg"
+                                    src="https://cj.j1.com/images/listpage/product/productjh.gif" width="23"
+                                    height="22" />
+                            </div>
+                            <div class="productcxsp-cp">
+                                <div class="productcxsp-cp1">
+                                    <a href="https://www.j1.com/product/62426-79153.html">
+                                        <img onerror="dealwithErrImg(event)" width="110" title=" 优锐 BD胰岛素注射笔针头 4mm*7支  "
+                                            alt=" 优锐 BD胰岛素注射笔针头 4mm*7支  " height="110"
+                                            src="https://img01.j1.com/upload/goods/200-200/62426/62426_0.jpg" />
+                                    </a>
+                                </div>
+                                <div class="productcxsp-cp2">
+                                    <a href="https://www.j1.com/product/62426-79153.html"> 优锐 BD胰岛素注射笔针头 4mm*7支 </a>
+                                </div>
+                                <div class="productcxsp-cp3" goodsid="79153">
+                                    <input class="buyThis" value="" type="checkbox" name="" /><span
+                                        class="productstyle7">￥
+                                        <div class="grey">
+                                            <input type="hidden" class="ecPrice" value="23.00" name="ecPrice" />
+                                        </div>
+                                        <div class="grey">
+                                            <input type="hidden" class="marketPrice" value="23.40" name="marketPrice" />
+                                        </div>
+                                        23.00
+                                    </span>
+                                </div>
+                                <div class="buy">
+                                    <a class="p-buy" target="_blank" href="javaScript:void(0);"
+                                        onclick="addMultiCart('79153,1,0')"><em class="gw"></em>加入购物车</a>
+                                </div>
+                            </div>
+                            <div class="productcxsp-fh">
+                                <img class="productcxsp-fhimg"
+                                    src="https://cj.j1.com/images/listpage/product/productjh.gif" width="23"
+                                    height="22" />
+                            </div>
+                            <div class="productcxsp-cp">
+                                <div class="productcxsp-cp1">
+                                    <a href="https://www.j1.com/product/1147-55663.html">
+                                        <img onerror="dealwithErrImg(event)" width="110" title=" 海氏海诺 医用酒精消毒棉球 25只  "
+                                            alt=" 海氏海诺 医用酒精消毒棉球 25只  " height="110"
+                                            src="https://img01.j1.com/upload/gs/20170406/1147_0_200x200.jpg" />
+                                    </a>
+                                </div>
+                                <div class="productcxsp-cp2">
+                                    <a href="https://www.j1.com/product/1147-55663.html"> 海氏海诺 医用酒精消毒棉球 25只 </a>
+                                </div>
+                                <div class="productcxsp-cp3" goodsid="55663">
+                                    <input class="buyThis" value="" type="checkbox" name="" /><span
+                                        class="productstyle7">￥
+                                        <div class="grey">
+                                            <input type="hidden" class="ecPrice" value="6.00" name="ecPrice" />
+                                        </div>
+                                        <div class="grey">
+                                            <input type="hidden" class="marketPrice" value="6.00" name="marketPrice" />
+                                        </div>
+                                        6.00
+                                    </span>
+                                </div>
+                                <div class="buy">
+                                    <a class="p-buy" target="_blank" href="javaScript:void(0);"
+                                        onclick="addMultiCart('55663,1,0')"><em class="gw"></em>加入购物车</a>
+                                </div>
+                            </div>
+                            <div class="productcxsp-fh">
+                                <img class="productcxsp-fhimg"
+                                    src="https://cj.j1.com/images/listpage/product/productjh.gif" width="23"
+                                    height="22" />
+                            </div>
+                            <div class="productcxsp-cp">
+                                <div class="productcxsp-cp1">
+                                    <a href="https://www.j1.com/product/112173-121444.html">
+                                        <img onerror="dealwithErrImg(event)" width="110" title=" 恒敬 苦瓜茶 30g  "
+                                            alt=" 恒敬 苦瓜茶 30g  " height="110"
+                                            src="https://img01.j1.com/upload/gs/20150612/112173_0_200x200.jpg" />
+                                    </a>
+                                </div>
+                                <div class="productcxsp-cp2">
+                                    <a href="https://www.j1.com/product/112173-121444.html"> 恒敬 苦瓜茶 30g </a>
+                                </div>
+                                <div class="productcxsp-cp3" goodsid="121444">
+                                    <input class="buyThis" value="" type="checkbox" name="" /><span
+                                        class="productstyle7">￥
+                                        <div class="grey">
+                                            <input type="hidden" class="ecPrice" value="12.90" name="ecPrice" />
+                                        </div>
+                                        <div class="grey">
+                                            <input type="hidden" class="marketPrice" value="22.00" name="marketPrice" />
+                                        </div>
+                                        12.90
+                                    </span>
+                                </div>
+                                <div class="buy">
+                                    <a class="p-buy" target="_blank" href="javaScript:void(0);"
+                                        onclick="addMultiCart('121444,1,0')"><em class="gw"></em>加入购物车</a>
+                                </div>
+                            </div>
+                            <div class="productcxsp-fh">
+                                <img class="productcxsp-fhimg"
+                                    src="https://cj.j1.com/images/listpage/product/productjh.gif" width="23"
+                                    height="22" />
+                            </div>
+                            <div class="productcxsp-cp">
+                                <div class="productcxsp-cp1">
+                                    <a href="https://www.j1.com/product/28014-51592.html">
+                                        <img onerror="dealwithErrImg(event)" width="110" title=" 强生 稳豪型血糖仪试纸50片配针头   "
+                                            alt=" 强生 稳豪型血糖仪试纸50片配针头   " height="110"
+                                            src="https://img01.j1.com/upload/gs/20151008/28014_0_200x200.jpg" />
+                                    </a>
+                                </div>
+                                <div class="productcxsp-cp2">
+                                    <a href="https://www.j1.com/product/28014-51592.html"> 强生 稳豪型血糖仪试纸50片配针头 </a>
+                                </div>
+                                <div class="productcxsp-cp3" goodsid="51592">
+                                    <input class="buyThis" value="" type="checkbox" name="" /><span
+                                        class="productstyle7">￥
+                                        <div class="grey">
+                                            <input type="hidden" class="ecPrice" value="195.00" name="ecPrice" />
+                                        </div>
+                                        <div class="grey">
+                                            <input type="hidden" class="marketPrice" value="259.00"
+                                                name="marketPrice" />
+                                        </div>
+                                        195.00
+                                    </span>
+                                </div>
+                                <div class="buy">
+                                    <a class="p-buy" target="_blank" href="javaScript:void(0);"
+                                        onclick="addMultiCart('51592,1,0')"><em class="gw"></em>加入购物车</a>
+                                </div>
+                            </div>
+                            <div class="productcxsp-hz">
+                                <div class="productcxsp-hz1">
+                                    已选择<span id="buyNum">0</span>个商品
+                                </div>
+                                <div class="productcxsp-hz2">
+                                    <div class="productcxsp-price1"></div>
+                                </div>
+                                <div class="productcxsp-hz3">
+                                    <a href="#" id="combinnationBuy"><img
+                                            src="https://cj.j1.com/images/listpage/product/productbuy2.jpg" width="77"
+                                            height="25" /></a>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lazyDiv">
+
+                </div>
+                <div class="clear"></div>
+                <div class="publiclay sitenav">
+                    <h4>站内导航</h4>
+                    <ul class="clearfix">
+                        <li><A href="" target="_blank" title="三金片">三金片</A>
+                        </li>
+                        <li><A href="" target="_blank" title="布洛芬缓释胶囊">布洛芬缓释胶囊</A></li>
+                        <li><A href="" target="_blank" title="沐舒坦">沐舒坦</A></li>
+                        <li><A href="" target="_blank" title="复方氨酚烷胺胶囊">复方氨酚烷胺胶囊</A></li>
+                        <li><A href="https://www.j1.com/product/1224-55521.html" target="_blank" title="桂附地黄丸">桂附地黄丸</A>
+                        </li>
+                        <li><A href="https://www.j1.com/product/2767-49602.html" target="_blank" title="红霉素眼膏">红霉素眼膏</A>
+                        </li>
+                        <li><A href="https://www.j1.com/product/2730-50447.html" target="_blank" title="达克宁">达克宁</A>
+                        </li>
+                        <li><A href="https://www.j1.com/product/2051-51063.html" target="_blank" title="息斯敏">息斯敏</A>
+                        </li>
+                        <li><A href="https://www.j1.com/product/76499-85301.html" target="_blank" title="理肤泉">理肤泉</A>
+                        </li>
+                        <li><A href="https://www.j1.com/product/2652-49634.html" target="_blank" title="地塞米松">地塞米松</A>
+                        </li>
+                        <li><A href="https://www.j1.com/product/44803-58070.html" target="_blank"
+                                title="养血清脑颗粒">养血清脑颗粒</A>
+                        </li>
+                        <li><A href="https://www.j1.com/product/2711-48945.html" target="_blank"
+                                title="复方酮康唑软膏">复方酮康唑软膏</A>
+                        </li>
+                        <li><A href="https://www.j1.com/product/2320-47100.html" target="_blank" title="吗丁啉">吗丁啉</A>
+                        </li>
+                        <li><A href="https://www.j1.com/product/79100-87922.html" target="_blank" title="情趣内裤">情趣内裤</A>
+                        </li>
+                        <li><A href="https://www.j1.com/product/43563-43563.html" target="_blank" title="丹参片">丹参片</A>
+                        </li>
+                        <li><A href="https://www.j1.com/product/42441-42441.html" target="_blank" title="男宝胶囊">男宝胶囊</A>
+                        </li>
+                        <li><A href="https://www.j1.com/activity/youjiale.html" target="_blank" title="优甲乐">优甲乐</A>
+                        </li>
+                        <li><A href="https://www.j1.com/product/80676-89614.html" target="_blank" title="优甲乐">优甲乐</A>
+                        </li>
+                        <li><A href="https://www.j1.com/activity/youjiale.html" target="_blank" title="优甲乐">优甲乐</A>
+                        </li>
+                        <li><A href="https://www.j1.com/zixun/article-201601/318265.html" target="_blank"
+                                title="万艾可网购">万艾可网购</A></li>
+                        <div class="clear"></div>
+                    </ul>
+                </div>
+                <!-- 內頁热门推荐-->
+                <div class="publiclay hotj">
+                    <h4>热门推荐</h4>
+                    <div class="hotmend">
+                        <div class="hd">
+                            <a class="next"><em class="jtright"></em></a> <a class="prev"><em class="jtleft"></em></a>
+                        </div>
+                        <div class="bd">
+                            <ul class="picList">
+                                <li>
+                                    <div class="hotmain ">
+                                        <a href="https://www.j1.com/product/75412-84214.html" class="pic"><img
+                                                src="https://img01.j1.com/upload/goods/200-200/75412/75412_0.jpg"
+                                                width="80" height="80" alt="  玻璃酸钠滴眼液    玻璃酸钠滴眼液 5毫升"
+                                                title="  玻璃酸钠滴眼液    玻璃酸钠滴眼液 5毫升" /></a> <a
+                                            href="https://www.j1.com/product/75412-84214.html" class="text-01">
+                                            玻璃酸钠滴眼液 玻璃酸钠滴眼液 5毫升</a>
+                                    </div>
+                                    <div class="hotmain ">
+                                        <a href="https://www.j1.com/product/27984-55458.html" class="pic"><img
+                                                src="https://img01.j1.com/upload/gs/20160822/27984_0_200x200.jpg"
+                                                width="80" height="80" alt=" 仲景 仲景 六味地黄丸 360丸（浓缩丸）"
+                                                title=" 仲景 仲景 六味地黄丸 360丸（浓缩丸）" /></a> <a
+                                            href="https://www.j1.com/product/27984-55458.html" class="text-01"> 仲景
+                                            仲景 六味地黄丸 360丸（浓缩丸）</a>
+                                    </div>
+                                    <div class="hotmain ">
+                                        <a href="https://www.j1.com/product/44718-57759.html" class="pic"><img
+                                                src="https://img01.j1.com/upload/gs/20160830/44718_0_200x200.jpg"
+                                                width="80" height="80" alt=" 智灵 智灵牌冬虫夏草胶丸 冬虫夏草 "
+                                                title=" 智灵 智灵牌冬虫夏草胶丸 冬虫夏草 " /></a> <a
+                                            href="https://www.j1.com/product/44718-57759.html" class="text-01"> 智灵
+                                            智灵牌冬虫夏草胶丸 冬虫夏草 </a>
+                                    </div>
+                                    <div class="hotmain ">
+                                        <a href="https://www.j1.com/product/2806-56002.html" class="pic"><img
+                                                src="https://img01.j1.com/upload/gs/20150708/2806_0_200x200.jpg"
+                                                width="80" height="80" alt="  敬修堂  养血生发胶囊 30粒"
+                                                title="  敬修堂  养血生发胶囊 30粒" /></a> <a
+                                            href="https://www.j1.com/product/2806-56002.html" class="text-01"> 敬修堂
+                                            养血生发胶囊 30粒</a>
+                                    </div>
+                                    <div class="hotmain mr0">
+                                        <a href="https://www.j1.com/product/2960-47801.html" class="pic"><img
+                                                src="https://img01.j1.com/upload/gs/20161103/2960_0_200x200.jpg"
+                                                width="80" height="80" alt=" 惠氏 善存  多维元素片(29) 30片  "
+                                                title=" 惠氏 善存  多维元素片(29) 30片  " /></a> <a
+                                            href="https://www.j1.com/product/2960-47801.html" class="text-01"> 惠氏 善存
+                                            多维元素片(29) 30片 </a>
+                                    </div>
+                                    <div class="hotmain ">
+                                        <a href="https://www.j1.com/product/1486-48405.html" class="pic"><img
+                                                src="https://img01.j1.com/upload/gs/20180620/1486_0_200x200.jpg"
+                                                width="80" height="80" alt=" 吴太集团 感康 复方氨酚烷胺片 12片"
+                                                title=" 吴太集团 感康 复方氨酚烷胺片 12片" /></a>
+                                        <a href="https://www.j1.com/product/1486-48405.html" class="text-01"> 吴太集团
+                                            感康 复方氨酚烷胺片 12片</a>
+                                    </div>
+                                    <div class="hotmain ">
+                                        <a href="https://www.j1.com/product/27767-55998.html" class="pic"><img
+                                                src="https://img01.j1.com/upload/gs/20181214/27767_0_200x200.jpg"
+                                                width="80" height="80" alt=" 东阿阿胶 东阿阿胶  铁盒  250克  "
+                                                title=" 东阿阿胶 东阿阿胶  铁盒  250克  " /></a> <a
+                                            href="https://www.j1.com/product/27767-55998.html" class="text-01"> 东阿阿胶
+                                            东阿阿胶 铁盒 250克 </a>
+                                    </div>
+                                    <div class="hotmain ">
+                                        <a href="https://www.j1.com/product/2958-47820.html" class="pic"><img
+                                                src="https://img01.j1.com/upload/goods/1-200/13175.jpg" width="80"
+                                                height="80" alt=" 斯利安 斯利安  叶酸片  31片  "
+                                                title=" 斯利安 斯利安  叶酸片  31片  " /></a>
+                                        <a href="https://www.j1.com/product/2958-47820.html" class="text-01"> 斯利安
+                                            斯利安 叶酸片 31片 </a>
+                                    </div>
+                                    <div class="hotmain ">
+                                        <a href="https://www.j1.com/product/27985-46719.html" class="pic"><img
+                                                src="https://img01.j1.com/upload/gs/20171116/27985_0_200x200.jpg"
+                                                width="80" height="80" alt=" 仲景 仲景 知柏地黄丸   360丸（浓缩丸）"
+                                                title=" 仲景 仲景 知柏地黄丸   360丸（浓缩丸）" /></a> <a
+                                            href="https://www.j1.com/product/27985-46719.html" class="text-01"> 仲景
+                                            仲景 知柏地黄丸 360丸（浓缩丸）</a>
+                                    </div>
+                                    <div class="hotmain mr0">
+                                        <a href="https://www.j1.com/product/27796-47995.html" class="pic"><img
+                                                src="https://img01.j1.com/upload/gs/20160817/27796_0_200x200.jpg"
+                                                width="80" height="80" alt=" 千金 千金  妇科千金片  18片*6板 "
+                                                title=" 千金 千金  妇科千金片  18片*6板 " /></a> <a
+                                            href="https://www.j1.com/product/27796-47995.html" class="text-01"> 千金
+                                            千金 妇科千金片 18片*6板 </a>
+                                    </div>
+                                    <div class="hotmain ">
+                                        <a href="https://www.j1.com/product/27829-56016.html" class="pic"><img
+                                                src="https://img01.j1.com/upload/goods/200-200/27829/27829_0.jpg"
+                                                width="80" height="80" alt=" 北京同仁堂 同仁堂 同仁乌鸡白凤丸 10丸  "
+                                                title=" 北京同仁堂 同仁堂 同仁乌鸡白凤丸 10丸  " /></a> <a
+                                            href="https://www.j1.com/product/27829-56016.html" class="text-01">
+                                            北京同仁堂 同仁堂 同仁乌鸡白凤丸 10丸 </a>
+                                    </div>
+                                    <div class="hotmain ">
+                                        <a href="https://www.j1.com/product/44016-44016.html" class="pic"><img
+                                                src="https://img01.j1.com/upload/goods/200-200/44016/44016_0.jpg"
+                                                width="80" height="80" alt=" 北京同仁堂 同仁堂 五子衍宗丸 60g  "
+                                                title=" 北京同仁堂 同仁堂 五子衍宗丸 60g  " /></a> <a
+                                            href="https://www.j1.com/product/44016-44016.html" class="text-01">
+                                            北京同仁堂 同仁堂 五子衍宗丸 60g </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- 品牌推荐 -->
+                <div class="publiclay brandlogo">
+                    <h4>品牌推荐</h4>
+                    <ul class="clearfix">
+                        <li><a href="https://www.j1.com/b-0-4479.html" target="_blank"><img
+                                    src="https://img01.j1.com/upload/pic/homepage/1427966547383.gif" width="120"
+                                    height="30" alt="善存" title="善存" /></a></li>
+                        <li><a href="https://www.j1.com/b-0-2533.html" target="_blank"><img
+                                    src="https://img01.j1.com/upload/pic/homepage/1427966684673.jpg" width="120"
+                                    height="30" alt="云南白药" title="云南白药" /></a></li>
+                        <li><a href="https://www.j1.com/b-0-2489.html" target="_blank"><img
+                                    src="https://img01.j1.com/upload/pic/homepage/1427966736255.jpg" width="120"
+                                    height="30" alt="东阿阿胶" title="东阿阿胶" /></a></li>
+                        <li><a href="https://www.j1.com/b-0-2623.html" target="_blank"><img
+                                    src="https://img01.j1.com/upload/pic/homepage/1427966806260.jpg" width="120"
+                                    height="30" alt="毓婷" title="毓婷" /></a></li>
+                        <li><a href="https://www.j1.com/b-0-2555.html" target="_blank"><img
+                                    src="https://img01.j1.com/upload/pic/homepage/1427966833472.gif" width="120"
+                                    height="30" alt="汤臣倍健" title="汤臣倍健" /></a></li>
+                        <li><a href="https://www.j1.com/b-0-2611.html" target="_blank"><img
+                                    src="https://img01.j1.com/upload/pic/homepage/1427966868205.jpg" width="120"
+                                    height="30" alt="杜蕾斯" title="杜蕾斯" /></a></li>
+                        <li><a href="https://www.j1.com/b-0-2519.html" target="_blank"><img
+                                    src="https://img01.j1.com/upload/pic/homepage/1427966889823.gif" width="120"
+                                    height="30" alt="同仁堂" title="同仁堂" /></a></li>
+                        <li><a href="https://www.j1.com/b-0-2862.html" target="_blank"><img
+                                    src="https://img01.j1.com/upload/pic/homepage/1427966916264.gif" width="120"
+                                    height="30" alt="达克宁" title="达克宁" /></a></li>
+                        <li><a href="https://www.j1.com/b-0-2725.html" target="_blank"><img
+                                    src="https://img01.j1.com/upload/pic/homepage/1427966991654.jpg" width="120"
+                                    height="30" alt="薇姿" title="薇姿" /></a></li>
+                        <li><a href="https://www.j1.com/b-0-3956.html" target="_blank"><img
+                                    src="https://img01.j1.com/upload/pic/homepage/1427967031329.jpg" width="120"
+                                    height="30" alt="森田药妆" title="森田药妆" /></a></li>
+                        <li><a href="https://www.j1.com/b-0-3735.html" target="_blank"><img
+                                    src="https://img01.j1.com/upload/pic/homepage/1427967064120.jpg" width="120"
+                                    height="30" alt="舒适达" title="舒适达" /></a></li>
+                        <li><a href="https://www.j1.com/b-0-2840.html" target="_blank"><img
+                                    src="https://img01.j1.com/upload/pic/homepage/1427967096409.gif" width="120"
+                                    height="30" alt="强生" title="强生" /></a></li>
+                        <li><a href="https://www.j1.com/b-0-4122.html" target="_blank"><img
+                                    src="https://img01.j1.com/upload/pic/homepage/1429249147427.jpg" width="120"
+                                    height="30" alt="ABC" title="ABC" /></a></li>
+                        <li><a href="https://www.j1.com/b-0-3774.html" target="_blank"><img
+                                    src="https://img01.j1.com/upload/pic/homepage/1429249926417.jpg" width="120"
+                                    height="30" alt="片仔癀" title="片仔癀" /></a></li>
+                        <li><a href="https://www.j1.com/b-0-2585.html" target="_blank"><img
+                                    src="https://img01.j1.com/upload/pic/homepage/1429250006280.jpg" width="120"
+                                    height="30" alt="3M" title="3M" /></a></li>
+                        <li><a href="https://www.j1.com/b-0-2761.html" target="_blank"><img
+                                    src="https://img01.j1.com/upload/pic/homepage/1429250047861.jpg" width="120"
+                                    height="30" alt="妇炎洁" title="妇炎洁" /></a></li>
+                        <li><a href="https://www.j1.com/b-0-2901.html" target="_blank"><img
+                                    src="https://img01.j1.com/upload/pic/homepage/1429250198197.jpg" width="120"
+                                    height="30" alt="沐舒坦" title="沐舒坦" /></a></li>
+                        <li><a href="https://www.j1.com/b-0-4071.html" target="_blank"><img
+                                    src="https://img01.j1.com/upload/pic/homepage/1429250326787.jpg" width="120"
+                                    height="30" alt="亮甲" title="亮甲" /></a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div class="clear"></div>
+        <script>
+            var wywdjTabLi = $(".wywdj-tab li");
+            console.log(wywdjTabLi)
+            wywdjTabLi.click(function (event) {
+                var index = $(this).index();
+                $(this).addClass('act').siblings().removeClass('act');
+                $(".wywdj-qh>div").eq(index).show().siblings().hide();
+            });
+        </script>
+        <!--页脚 start -->
+        <div class="j11308_footer">
+            <div class="j11308_shadow1"></div>
+            <div class="j11308_width_1000">
+                <!-- 频道页友情链接 -->
+                <div class="cl"></div>
+                <div class="j11308_wx">
+                    <div class="wx_left">
+                        <div class="jyw_wx clearfix">
+                            <div class="wxxz-1">
+                                <img src="https://img.j1.com/images/images1308/ico/wxtb_01.jpg" alt="官方微信" />
+                                <dl>
+                                    <dt>健一网官方微信</dt>
+                                    <dd>关注官方微信</dd>
+                                    <dd>掌握更新健康产品信息</dd>
+                                </dl>
+                            </div>
+                            <div class="wxxz-1 wxxz-2">
+                                <img src="https://img.j1.com/images/images1308/ico/wxtb_02.jpg" alt="健一网客户端下载" />
+                                <dl>
+                                    <dt>健一网客户端下载</dt>
+                                    <dd class="mb5">手机端购买惊喜更多</dd>
+                                    <a href="https://t.j1.com/appstore" target="_blank"></a><a
+                                        href="http://android.myapp.com/myapp/detail.htm?apkName=com.j1.healthcare.patient"
+                                        class="iphone_az" target="_blank"></a>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="index_tel">
+                            <span>8:30-21:00节假照常</span>客服热线：<i>4007-800-800</i>
+                        </div>
+                    </div>
+                    <div class="j11308_foot_list">
+                        <ul>
+                            <p>新手上路</p>
+                            <li><a rel="nofollow" target="_blank" href="https://www.j1.com/news-help-21.html">免费注册</a>
+                            </li>
+                            <li><a rel="nofollow" target="_blank" href="https://www.j1.com/news-help-23.html">购物流程</a>
+                            </li>
+                            <li><a rel="nofollow" target="_blank" href="https://www.j1.com/news-help-24.html">支付安全</a>
+                            </li>
+                            <li><a rel="nofollow" target="_blank" href="https://www.j1.com/news-help-25.html">安全购药</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <p>关于支付</p>
+                            <li><a rel="nofollow" target="_blank" href="https://www.j1.com/news-help-26.html">支付方式</a>
+                            </li>
+                            <li><a rel="nofollow" target="_blank" href="https://www.j1.com/news-help-27.html">发票</a>
+                            </li>
+                            <li><a rel="nofollow" target="_blank" href="https://www.j1.com/news-help-28.html">退款</a>
+                            </li>
+                            <li><a rel="nofollow" target="_blank" href="https://www.j1.com/news-help-62.html">优惠券使用</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <p>关于配送</p>
+                            <li><a rel="nofollow" target="_blank" href="https://www.j1.com/news-help-29.html">配送方式</a>
+                            </li>
+                            <li><a rel="nofollow" target="_blank" href="https://www.j1.com/news-help-30.html">配送费用</a>
+                            </li>
+                            <li><a rel="nofollow" target="_blank" href="https://www.j1.com/news-help-31.html">收货验货</a>
+                            </li>
+                            <li><a rel="nofollow" target="_blank" href="https://www.j1.com/news-help-32.html">到货时间</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <p>售后服务</p>
+                            <li><a rel="nofollow" target="_blank" href="https://www.j1.com/news-help-33.html">退货服务</a>
+                            </li>
+                            <li><a rel="nofollow" target="_blank" href="https://www.j1.com/news-help-34.html">如何退换货</a>
+                            </li>
+                            <li><a rel="nofollow" target="_blank" href="https://www.j1.com/news-help-35.html">发票票据</a>
+                            </li>
+                            <li><a rel="nofollow" target="_blank" href="https://www.j1.com/news-help-102.html">健一卡须知</a>
+                            </li>
+                        </ul>
+                        <ul>
+                            <p>其他</p>
+                            <li><a rel="nofollow" target="_blank" href="https://www.j1.com/news-help-36.html">会员等级</a>
+                            </li>
+                            <li><a rel="nofollow" target="_blank" href="https://www.j1.com/news-help-37.html">会员积分</a>
+                            </li>
+                            <li><a rel="nofollow" target="_blank" href="https://www.j1.com/news-help-38.html">免责条款</a>
+                            </li>
+                            <li><a rel="nofollow" target="_blank" href="https://www.j1.com/news-help-39.html">投诉与建议</a>
+                            </li>
+                        </ul>
+                        <ul class="nbd">
+                            <p>关于我们</p>
+                            <li><a rel="nofollow" target="_blank" href="https://www.j1.com/news-help-40.html">关于健一</a>
+                            </li>
+                            <li><a rel="nofollow" target="_blank" href="https://www.j1.com/news-help-41.html">联系我们</a>
+                            </li>
+                            <!-- 21801 需求要求隐藏
+					<li><a rel="nofollow" target="_blank" href="https://www.j1.com/news-help-42.html">诚聘英才</a></li> -->
+                            <li><a target="_blank" href="https://www.j1.com/link.html">友情链接</a></li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="cl"></div>
+                <div class="j11308_renzheng">
+                    <div class="zhengshu">
+                        <a rel="nofollow" href="" target="_blank">互联网药品交易服务资格证书</a>&nbsp;&nbsp; <a rel="nofollow"
+                            href="" target="_blank">药品经营许可证</a>&nbsp;&nbsp; <a rel="nofollow" href=""
+                            target="_blank">互联网药品信息服务资格证书</a>&nbsp;&nbsp; <a rel="nofollow" href=""
+                            target="_blank">食品流通许可证</a>&nbsp;&nbsp; <a rel="nofollow" href=""
+                            target="_blank">医疗器械经营企业许可证</a>&nbsp;&nbsp; <a rel="nofollow" href=""
+                            target="_blank">药品经营质量管理规范认证证书（新）</a><br> <a rel="nofollow" href=""
+                            target="_blank">互联网医疗保健信息服务审核同意书</a>&nbsp;&nbsp; <a rel="nofollow" href=""
+                            target="_blank">信用资质等级评定</a>&nbsp;&nbsp; <a rel="nofollow" href=""
+                            target="_blank">信用资质等级证书</a>&nbsp;&nbsp; <a rel="nofollow" href=""
+                            target="_blank">企业法人营业执照</a>&nbsp;&nbsp; <a rel="nofollow" href="" target="_blank">税务登记证</a>
+                    </div>
+                    <div class="cl"></div>
+                    <div class="foot_img">
+                        <a rel="nofollow" target="_blank"
+                            href="http://www.miibeian.gov.cn/state/outPortal/loginPortal.action;jsessionid=ppHpQsvTypTQ8TnpTLhRsLnT9LLX1bxwQDhQTmhfjTnPgT7pypGG!1946552544"><img
+                                alt="沪ICP备" width="123" height="45" border="0"
+                                src="https://img.j1.com/images/index_r9_c13.jpg"></a> </script>
+                        <a rel="nofollow" name="ca1996213057ab9211ece1aba16b0ac8" target="_blank"
+                            href="http://webscan.360.cn/index/checkwebsite/url/www.j1.com"> </a> <a
+                            href="https://www.itrust.org.cn/yz/pjwx.asp?wm=1746161791" rel="nofollow"
+                            target="_blank"><img src="https://img02.j1.com/images/images1308/ico/zgxyqy.jpg" width="139"
+                                height="45" alt="信用企业" /></a>
+                        <a id='___szfw_logo___' href='https://credit.szfw.org/CX20150723010835220358.html'
+                            target='_blank'><img src='https://img02.j1.com/images/images1308/ico/cxsfwz.png' width="120"
+                                height="45" border='0' /></a>
+                        <a id="_pingansec_bottomimagesmall_brand"
+                            href="http://si.trustutn.org/info?sn=972180628035879814047&certType=1"><img
+                                src="http://v.trustutn.org/images/cert/brand_bottom_small.jpg" /></a>
+                    </div>
+                    <div class="cl"></div>
+                    <div>Copyright © j1.com All rights reserved 沪ICP备09007253号 <a
+                            href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010402000326"
+                            class="security" target="_blank">沪公网安备 31010402000326号</a>上海健一网大药房连锁经营有限公司</div>
+                </div>
+            </div>
+            <div>
+                <span style="color: #e6e6e6">8080,tomcat-j1-1</span>
+            </div>
+        </div>
+</body>
+
+</html>
+<!--页脚 end-->
+<div style="display: none;">
+    <div style="display: none;">
+    </div>
+</div>
+
+<script>
+    (function () {
+
+
+        //返回顶部----------------------------------------------
+
+        //回到顶部点击事件
+        $('.close_top').click(function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        })
+
+
+
+        //登录功能-------------------------------------------------------
+
+
+
+        let usname = getCookie('name');
+        $('.top_login span').html('欢迎' + usname + '来到健客网上药店');
+
+
+        //刷新页面
+        function refresh() {
+            if (usname) {
+                $('#login').hide();
+                $('#loginout').show();
+                $('#azhuce').hide();
+                $.ajax({
+                    type: 'post',
+                    url: '../api/goods.php',
+                    data: 'name=' + getCookie('name') + '&a=1',
+                    success: function (str) {
+                        let arr = JSON.parse(str);
+                        let sumNum = arr.sum[0]["SUM(num)"];
+                        // console.log(sumNum)
+                        if (sumNum == null) {
+                            $('#numshop').html('0');
+                        } else {
+                            $('#numshop').html(sumNum);
+                        }
+                    }
+                })
+            } else {
+                $('#login').show();
+                $('#loginout').hide();
+                $('#azhuce').show();
+                $('.top_login span').html('欢迎来到健客网上药店！');
+                $('#numshop').html('0');
+            }
+
+            $('#login').click(function () {
+                setCookie('url', location.href, 1);
+                location.href = 'login.html';
+            });
+
+            $('#azhuce').click(function () {
+                location.href = 'reg.html';
+            });
+
+            $('#loginout').click(function () {
+                removeCookie('name');
+                $('#login').show();
+                $('#azhuce').show();
+                $('#loginout').hide();
+                $('.top_login span').html('欢迎来到健客网上药店！');
+                $('#numshop').html('0');
+            })
+        }
+        refresh();
+
+
+        //二级导航假数据---------------------------------------------------------------
+
+
+
+
+        let nav = [{
+            a: '男科用药',
+            span: '阳痿早泄',
+            list: [{
+                name: '男科用药',
+                spans: ['阳痿早泄', '补肾壮阳', '滋阴补肾', '男性不育', '前列腺炎', '前列腺增生', '泌尿系统', '脱发白发', '解酒护肝',
+                    '成人用品'
+                ]
+            }, {
+                name: '推荐产品',
+                spans: ['盐酸达泊西汀片(必利劲)', '枸橼酸西地那非片(金戈)', '枸橼酸西地那非片(万艾可)', '他达拉非片(希爱力)', '肾宝片', '龟龄集',
+                    '固本回元口服液', '前列通瘀胶囊', '前列舒乐胶囊', '六味地黄丸', '疏肝益阳胶囊(益佰)', '生精片(万胜)',
+                    '左卡尼汀口服溶液(东维力)', '引阳索胶囊(育林)'
+                ]
+            }, {
+                name: '推荐品牌',
+                spans: ['../img/g0.jpg']
+            }]
+        }, {
+            a: '心血管科',
+            span: '高血压',
+            list: [{
+                name: '心血管科',
+                spans: ['高血压', '高血脂', '冠心病', '心绞痛', '心律失常', '脉管炎', '动脉硬化', '中风', '调节三高', '血压计',
+                    '其他用药', '心肌病'
+                ]
+            }, {
+                name: '推荐产品',
+                spans: ['替格瑞洛片(倍林达)', '缬沙坦氨氯地平片(Ⅰ)(倍博特)', '阿托伐他汀钙片(立普妥)', '益安宁丸(同溢堂)', '迈之灵片',
+                    '瑞舒伐他汀钙片(可定)', '贝前列素钠片(凯那)', '珊瑚七十味丸(神水藏药)'
+                ]
+            }, {
+                name: '推荐品牌',
+                spans: ['']
+            }]
+        }, {
+            a: '糖尿病科',
+            span: 'II型糖尿病',
+            list: [{
+                name: '糖尿病科',
+                spans: ['Ⅱ型糖尿病西药', 'Ⅱ型糖尿病中成药', '视网膜病变', '神经病变', '血糖仪/血糖试纸', '无痛测糖', '糖尿病营养']
+            }, {
+                name: '推荐产品',
+                spans: ['安达唐', '捷诺维', '捷诺达', '唯依能', '拜唐苹', '安立泽', '宜合瑞', '芪明颗粒', '止渴养阴胶囊',
+                    '雅培益力佳SR营养配方粉(香草口味)', '瑞代'
+                ]
+            }, {
+                name: '推荐品牌',
+                spans: ['../img/g1.jpg']
+            }]
+        }, {
+            a: '风湿骨科',
+            span: '痛风 风湿',
+            list: [{
+                name: '风湿骨科',
+                spans: ['风湿关节病', '跌打损伤', '颈椎腰椎病', '痛风', '骨质疏松', '骨质增生', '股骨头坏死', '维矿物质', '骨骼健康',
+                    '腰肌劳损', '肩周炎', '康复理疗'
+                ]
+            }, {
+                name: '推荐产品',
+                spans: ['舒筋健腰丸', '优立通', '曹清华', '葛洪桂龙药膏', '艾拉莫德片', '恒古骨伤愈合剂', '昆仙胶囊', '西乐葆', '奥泰灵',
+                    '安康信', '迪巧'
+                ]
+            }, {
+                name: '推荐品牌',
+                spans: ['../img/g2.jpg']
+            }]
+        }, {
+            a: '肝胆科药',
+            span: '脂肪肝',
+            list: [{
+                name: '肝胆科药',
+                spans: ['肝炎用药', '肝硬化', '胆囊炎', '胆结石', '脂肪肝', '保肝护', '肝黄疸', '肝性脑病']
+            }, {
+                name: '推荐产品',
+                spans: ['恩甘定', '贝双定', '代丁', '熊去氧胆酸胶囊(优思弗)', '双环醇片(百赛诺)', '还原型谷胱甘肽片(阿拓莫兰)', '片仔癀',
+                    '美能', '博路定', '维力青', '润众', '雷易得', '素比伏', '贺普丁'
+                ]
+            }, {
+                name: '推荐品牌',
+                spans: ['../img/g3.jpg']
+            }]
+        }, {
+            a: '肿瘤科药',
+            span: '肿瘤用药',
+            list: [{
+                name: '肿瘤科药',
+                spans: ['肿瘤用药', '癌症止痛', '移植用药', '增强免疫', '免疫调节', '肿瘤营养']
+            }, {
+                name: '推荐产品',
+                spans: ['槐耳颗粒', '易瑞沙', '替吉奥胶囊(苏立)', '紫龙金片', '来曲唑片(芙瑞)', '甲氨蝶呤片', '食道平散',
+                    '比卡鲁胺片(朝晖先)', '泰勒宁', '安素', '参红祛瘀散结胶囊', '复方红豆杉胶囊', '复方斑蝥胶囊', '西黄丸',
+                    '复方万年青胶囊', '环孢素软胶囊', '瑞能'
+                ]
+            }, {
+                name: '推荐品牌',
+                spans: ['../img/g10.jpg']
+            }]
+        }, {
+            a: '皮肤科药',
+            span: '皮炎湿疹',
+            list: [{
+                name: '皮肤科药',
+                spans: ['皮炎湿疹', '真菌感染', '疣类疱疹', '皮肤过敏', '痤疮', '白癜风', '痈疽疔疮', '冻疮烫伤', '淋病梅毒', '除疤',
+                    '蚊虫叮咬', '银屑病', '狐臭腋臭', '脱发白发', '灰指甲', '鱼鳞病', '皮肤光疗仪'
+                ]
+            }, {
+                name: '推荐产品',
+                spans: ['适今可', '卡泊三醇软膏', '斯皮仁诺', '鬼臼毒素酊', '唐草片', '盐酸伐昔洛韦片', '非那雄胺片', '米诺地尔酊',
+                    '千白氢醌乳膏', '阿达帕林凝胶', '泰尔丝', '康瑞保', '氨甲环酸片', '他克莫司软膏', '地奈德乳膏', '枸地氯雷他定片',
+                    '皮肤病血毒丸', '硫酸羟氯喹片', '复方驱虫斑鸠菊丸', '维阿露'
+                ]
+            }, {
+                name: '推荐品牌',
+                spans: ['../img/g11.jpg']
+            }]
+        }, {
+            a: '消化系统',
+            span: '胃肠炎',
+            list: [{
+                name: '消化系统',
+                spans: ['胃肠炎', '痔疮', '消化道溃疡', '便秘', '腹痛腹泻', '消化不良', '肠胃养护']
+            }, {
+                name: '推荐产品',
+                spans: ['惠迪', '丽珠', '耐信', '猴头菌', '得美通', '艾迪莎', '消脱止', '痔根断', '杜密克', '非比麸', '莎尔福',
+                    '能全力', '百普素'
+                ]
+            }, {
+                name: '推荐品牌',
+                spans: ['../img/g9.jpg']
+            }]
+        }, {
+            a: '神经系统',
+            span: '抑郁症',
+            list: [{
+                name: '神经系统',
+                spans: ['帕金森', '抑郁症', '癫痫', '精神分裂症', '戒烟', '失眠', '焦虑症', '甲亢甲减', '神经衰弱', '神经性疼痛',
+                    '多动症', '强迫症', '痴呆', '健脑益智', '周围神经病', '神经损伤', '偏头痛', '类晕船晕车'
+                ]
+            }, {
+                name: '推荐产品',
+                spans: ['奥氮平片', '森福罗', '开浦兰', '易倍申', '畅沛', '赛乐特', '德巴金', '曲莱', '美多芭', '黛力新', '息宁',
+                    '神泰', '奥拉西坦胶囊', '舒肝解郁胶囊', '欣百达', '乐瑞卡', '咪多吡', '安理申', '盐酸舍曲林', '百优解'
+                ]
+            }, {
+                name: '推荐品牌',
+                spans: ['../img/g12.jpg']
+            }]
+        }, {
+            a: '呼吸系统',
+            span: '气管炎',
+            list: [{
+                name: '呼吸系统',
+                spans: ['气管炎', '哮喘用药', '化痰止咳', '肺结核', '鼻腔护理', '雾化器', '肺炎', '呼吸道感染', '肺部疾病']
+            }, {
+                name: '推荐产品',
+                spans: ['沙美特罗替卡松粉吸入剂(舒利迭)', '布地奈德福莫特罗粉吸入剂(信必可都保)', '吸入用布地奈德混悬液(普米克令舒)',
+                    '噻托溴铵粉吸入剂(思力华)', '顺尔宁', '百令胶囊', '畅迪', '噻托溴铵粉雾剂(天晴速乐)', '糠酸莫米松鼻喷雾剂(内舒拿)',
+                    '布地奈德鼻喷雾剂', '阿斯美', '普米克都保', '黄花杜鹃油胶丸', '利福布汀胶囊', '切诺', '吸入用复方异丙托溴铵溶液',
+                    '补肺活血胶囊', '百蕊颗粒', '博利康尼', '虫草清肺胶囊'
+                ]
+            }, {
+                name: '推荐品牌',
+                spans: ['../img/g4.jpg']
+            }]
+        }, {
+            a: '泌尿科药',
+            span: '泌尿科药',
+            list: [{
+                name: '泌尿科药',
+                spans: ['尿路感染', '尿道结石', '肾炎', '肾病综合征', '尿毒症', '肾结石', '利尿通淋', '尿频尿急']
+            }, {
+                name: '推荐产品',
+                spans: ['开同', '弥凝', '友来特', '黄葵胶囊', '海昆肾喜胶囊']
+            }, {
+                name: '推荐品牌',
+                spans: ['']
+            }]
+        }, {
+            a: '女性用药',
+            span: '妇科炎症',
+            list: [{
+                name: '女性用药',
+                spans: ['益气补血', '保胎育胎', '更年期用药', '调经养颜', '妇科炎症', '避孕药', '卵巢疾病', '美体瘦身', '排卵验孕',
+                    '成人用品', '子宫肌瘤', '乳腺增生', '延缓衰老'
+                ]
+            }, {
+                name: '推荐产品',
+                spans: ['屈螺酮炔雌醇片(优思明)', '坤泰胶囊 (新天)', '地屈孕酮片(达芙通)', '复合维生素片(爱乐维)', '戊酸雌二醇片(补佳乐)',
+                    '莉芙敏片', '维铁缓释片(褔乃得)', '雌二醇屈螺酮片(安今益)', '甲磺酸溴隐亭片(佰莫亭)', '东阿阿胶(简装)', '康妇消炎栓',
+                    '玛特纳', '复方多维元素片(23)', '叶酸片(斯利安)', '多糖铁复合物胶囊(红源达)', '保灵孕宝口服液', '调经促孕丸'
+                ]
+            }, {
+                name: '推荐品牌',
+                spans: ['../img/g5.jpg']
+            }]
+        }, {
+            a: '儿科用药',
+            span: '感冒发热',
+            list: [{
+                name: '儿科用药',
+                spans: ['感冒发热', '儿童肠胃', '儿童维矿', '儿童多动症', '儿童咳嗽', '儿童惊风', '蚊虫叮咬', '增强免疫', '退热贴',
+                    '维矿物质', '健脑益智'
+                ]
+            }, {
+                name: '推荐产品',
+                spans: ['奥氮平片', '森福罗', '开浦兰', '易倍申', '畅沛', '赛乐特', '德巴金', '曲莱', '美多芭', '黛力新', '息宁',
+                    '神泰', '奥拉西坦胶囊', '舒肝解郁胶囊', '欣百达', '乐瑞卡', '咪多吡', '安理申', '盐酸舍曲林', '百优解'
+                ]
+            }, {
+                name: '推荐品牌',
+                spans: ['../img/g6.jpg']
+            }]
+        }, {
+            a: '日常用药',
+            span: '清热解毒',
+            list: [{
+                name: '日常用药',
+                spans: ['感冒发烧', '清热解毒', '抗菌消炎', '眼科用药', '口腔疾病', '维矿物质', '耳鼻喉用药', '晕船晕车']
+            }, {
+                name: '推荐产品',
+                spans: ['可乐定透皮贴片', '多动宁胶囊', '地牡宁神口服液', '择思达', '生命一号', '迪巧', '小儿氨酚黄那敏颗粒', '妈咪爱',
+                    '小儿智力糖浆', '五维赖氨酸颗粒', '遗尿停胶囊', '甘草锌颗粒', '小儿清肺化痰口服液', '赖氨酸磷酸氢钙颗粒', '菖麻熄风片',
+                    '杞枣口服液', '珠贝定喘丸', '小儿豉翘清热颗粒', '龙牡壮骨颗粒', '五维赖氨酸口服溶液'
+                ]
+            }, {
+                name: '推荐品牌',
+                spans: ['../img/g7.jpg']
+            }]
+        }, {
+            a: '成人用品',
+            span: '避孕套',
+            list: [{
+                name: '成人用品',
+                spans: ['避孕套', '男用器具', '女用器具', '排卵验孕', '润滑/延时', '情趣用品']
+            }, {
+                name: '推荐产品',
+                spans: ['杜蕾斯避孕套激爽四合一装', '双蝶避孕套极薄快感', '岡本(冈本)OK0.03(白金超薄)', '杜蕾斯情趣跳蛋', '杜蕾斯人体润滑液',
+                    '激情热感装+快感...', '人绒毛膜促性腺激素(hCG)诊断试...', '人绒毛膜促性腺激素(hCG)电子测...',
+                    '促黄体生成激素检测试剂(乳胶法)排...', 'QraQuick', '人类免疫缺陷病毒...', 'DPP', '人类免疫缺陷病毒(HIV ...'
+                ]
+            }, {
+                name: '推荐品牌',
+                spans: ['']
+            }]
+        }, {
+            a: '滋补保健',
+            span: '健脑益智',
+            list: [{
+                name: '滋补保健',
+                spans: ['缓解疲劳', '调节三高', '肝肾养护', '滋补调养', '肠胃养护', '维矿物质', '骨骼健康', '视力保护', '增强免疫',
+                    '减肥瘦身', '改善睡眠', '补血益气', '滋补药材', '健脑益智', '孕期营养', '美白祛斑', '清咽润喉', '排毒养颜',
+                    '参茸饮片', '破壁饮片', '延缓衰老'
+                ]
+            }, {
+                name: '推荐产品',
+                spans: ['汤臣倍健蛋白粉', '葡萄糖酸钙锌口服溶液(锌钙特)', '脑白金(礼合装)', '健脑补肾丸', '养生堂牌天然维生素E软胶囊',
+                    '来益天然维生素E软胶囊', '维生素D滴剂', '金钙尔奇碳酸钙维D3元素片(4)', '汤臣倍健鱼油软胶囊', '破壁灵芝孢子粉胶囊(惠普生)',
+                    '荷氏可轻牌减肥胶囊', '清脑复神液(中方)', '芪冬养血胶囊', '枸杞子', '选粒(280粒)'
+                ]
+            }, {
+                name: '推荐品牌',
+                spans: ['']
+            }]
+        }, {
+            a: '医疗器械',
+            span: '血压计',
+            list: [{
+                name: '医疗器械',
+                spans: ['血压计', '血糖仪/试纸', '皮肤光疗仪', '鼻腔护理', '退热贴', '体温计', '棉签棉球', '护具', '冷热敷器具',
+                    '康复理疗', '伤口敷料', '制氧机', '雾化器', '检测试剂'
+                ]
+            }, {
+                name: '推荐产品',
+                spans: ['欧姆龙电子血压计HEM-8102A...', '雅培—辅理善瞬感扫描式葡萄糖监测系统', '鱼跃403C压缩空气式雾化器', '强生稳豪型血糖试纸',
+                    '三诺安准血糖试纸', '强生-稳豪倍优型血糖仪', '紫外线光疗仪SS-01型(希格玛)', '全日康J18B型电脑中频治疗仪(新款'
+                ]
+            }, {
+                name: '推荐品牌',
+                spans: ['']
+            }]
+        }, {
+            a: '美妆个护',
+            span: '补水保湿',
+            list: [{
+                name: '美妆个护',
+                spans: ['莹润面膜', '补水保湿', '美白防晒', '男士护理', '塑身美体', '专业药妆', '面部护理', '头发护理', '女生私护']
+            }, {
+                name: '推荐产品',
+                spans: ['玻尿酸补水保湿面膜(简亭)', '百雀羚草本精萃惊喜套装', '喜辽复修护凝胶', '8杯水保湿水嫩面膜', '复方酮康唑发用洗剂(康王)',
+                    '西施兰夏露'
+                ]
+            }, {
+                name: '推荐品牌',
+                spans: ['../img/g13.jpg']
+            }]
+        }]
+
+        let str1 = '';
+        let str = '';
+        let html = nav.map(function (item) {
+            str = item.list.map(function (item1) {
+                str1 = item1.spans.map(function (item2) {
+                    return `<span>${item2}</span>`
+                }).join('');
+                return `<div>
+                                <h3 style="margin-top: 0px">${item1.name}</h3>
+                                ${str1}
+                            </div>`
+            }).join('');
+            return `<li>
+                            <a href="###">${item.a}</a>
+                            <span>${item.span}</span>
+                            <div class="banner_more">
+                                ${str}
+                            </div>
+                        </li>`
+        }).join('');
+        $('.banner_nav').html(html);
+        //划过二级导航出现
+        $('.more').hover(function () {
+            $('.banner_nav').show();
+        }, function () {
+            $('.banner_nav').hide();
+        });
+
+
+
+
+
+
+
+
+
+        //收藏商品----------------------------------------------------
+        $('.addmore').click(function () {
+            if (getCookie('name')) {
+                alert('收藏成功');
+            } else {
+                $('.tishi').show();
+            }
+        })
+
+        //提示框功能
+        $('.close').click(function () {
+            $('.tishi').hide();
+        })
+        $('.tishi button').click(function () {
+            location.href = 'login.html'
+            setCookie('url', location.href, 1);
+
+        })
+        $('#guan').click(function () {
+            $('.tishi').hide();
+        })
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //接受列表页参数---------------------------------------------------------------
+
+
+
+
+
+        let url = decodeURI(location.search).slice(1); //解码
+        var obj = strToObj(url);
+        // console.log(obj);
+        setCookie('id', obj.id, 1);
+        $.ajax({
+            type: 'get',
+            url: '../api/list.php',
+            data: 'id=' + obj.id,
+            success: function (str) {
+                let arr = JSON.parse(str);
+                console.log(arr.list);
+
+                $('#b_pic').attr("src", arr.list[0].imgurl);
+                $('#small_pic')
+                    .attr('src', arr.list[0].imgurl);
+                $('.right_h3 h3').html(arr.list[0].title);
+                $('.p1').html(arr.list[0].store);
+                $('.p2')
+                    .html('S120011593' + arr.list[0].id);
+                $('.p3').html('国药准字B200206' + arr.list[0].id);
+                $('.p4').html('已有' + arr.list[0]
+                    .oldprice + '人评价');
+                $('.price').html('￥' + arr.list[0].price);
+                $('.changjia p').html(arr.list[0].store +
+                    '中药有限公司');
+                $('.hidden_box img').attr('src', arr.list[0].imgurl);
+                $('#add_shopping').attr('data-id', arr.list[0]
+                    .id);
+                $('.list_4lis').html(arr.list[0].store);
+                $('.inf').html('(库存' + arr.list[0].kucun + '件)');
+
+
+
+
+                //数量购买
+                let num = 1;
+                $('#num').val(num);
+
+                //增
+                $('#add').click(function () {
+                    if (num >= arr.list[0].kucun) {
+                        $('.inf').html('库存不足').css('color', 'red');
+                        $('#add').attr('pointer-events', 'none');
+                        num = arr.list[0].kucun;
+                    } else {
+                        num++;
+                        $('#add').removeAttr('pointer-events', 'auto');
+                        $('.inf').html('(库存' + arr.list[0].kucun + '件)').css('color', '#000');
+                    }
+                    $('#num').val(num);
+
+                })
+                //减
+                $('#jian').click(function () {
+                    if (num <= 1) {
+                        $('.inf').html('最少一件').css('color', 'red');
+                        $('#jian').attr('pointer-events', 'none');
+                        num = 1;
+                    } else {
+                        num--;
+                        $('#jian').removeAttr('pointer-events', 'auto');
+                        $('.inf').html('(库存' + arr.list[0].kucun + '件)').css('color', '#000');
+                    }
+                    $('#num').val(num);
+
+                })
+
+
+                //手动输入
+                $('#num').bind('input propertychange', function () {
+                    num = $('#num').val();
+                    if ($('#num').val() > arr.list[0].kucun) {
+                        $('.inf').html('库存不足').css('color', 'red');
+                    } else if ($('#num').val() < 1) {
+                        $('.inf').html('最少一件').css('color', 'red');
+                    } else if ($('#num').val() < arr.list[0].kucun && $('#num').val() >= 1) {
+                        $('.inf').html('(库存' + arr.list[0].kucun + '件)').css('color', '#000');
+                    }
+                })
+            }
+
+        })
+
+        //小导航点击跳回首页
+        $('.list_1lis').click(function () {
+            location.href = 'index.html';
+        })
+
+        $('.list_2lis').click(function () {
+            location.href = 'list.html';
+        })
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //放大镜效果-----------------------------------------------------------------------------
+
+
+
+
+
+
+        $('.b_imgbox').mouseover(function () {
+            $('.zhezhao').show();
+            $('.hidden_box').show();
+        })
+
+        $('.b_imgbox').mouseout(function () {
+            $('.zhezhao').hide();
+            $('.hidden_box').hide();
+        })
+
+        $('.b_imgbox').mousemove(function (ev) {
+            //计算鼠标在遮罩的中心位置
+            let x = ev.pageX - $('.b_imgbox').offset().left - $('.zhezhao').width() / 2;
+            let y = ev.pageY - $('.b_imgbox').offset().top - $('.zhezhao').height() / 2;
+
+            //临界值
+            if (x < 0) {
+                x = 0;
+            } else if (x > $('.b_imgbox').width() - $('.zhezhao').width()) {
+                x = $('.b_imgbox').width() - $('.zhezhao').width();
+            }
+
+            if (y < 0) {
+                y = 0;
+            } else if (y > $('.b_imgbox').height() - $('.zhezhao').height()) {
+                y = $('.b_imgbox').height() - $('.zhezhao').height();
+            }
+
+            //遮罩位置
+            $('.zhezhao').css({
+                'left': x + 'px',
+                'top': y + 'px'
+            })
+
+            //放大镜比例
+            let scalX = (($('.hidden_box img').width() - $('.hidden_box').width()) / ($('.b_imgbox')
+                .width() - $(
+                    '.zhezhao')
+                .width()))
+            let scalY = (($('.hidden_box img').height() - $('.hidden_box').height()) / ($('.b_imgbox')
+                .width() - $(
+                    '.zhezhao')
+                .height()))
+
+            //大图的位置
+            $('.hidden_box img').css({
+                'left': -scalX * x + 'px',
+                'top': -scalY * y + 'px'
+            })
+        })
+
+        //选择规则---------------------------------------------------------
+
+        $('.a_box').on('click', 'a', function () {
+            console.log("a");
+            $(this).addClass('active').siblings().removeClass('active');
+            $(this).children().show();
+            $(this).siblings().find($('img')).hide();
+        })
+
+
+
+
+
+
+
+
+        //抖动效果
+        //-----------------------------------------------------------------
+        jQuery.fn.shake = function (intShakes /*Amount of shakes*/ , intDistance /*Shake distance*/ ,
+            intDuration /*Time duration*/ ) {
+            this.each(function () {
+                var jqNode = $(this);
+                jqNode.css({
+                    position: 'relative'
+                });
+                for (var x = 1; x <= intShakes; x++) {
+                    jqNode.animate({
+                            left: (intDistance * -1)
+                        }, (((intDuration / intShakes) / 4)))
+                        .animate({
+                            left: intDistance
+                        }, ((intDuration / intShakes) / 2))
+                        .animate({
+                            left: 0
+                        }, (((intDuration / intShakes) / 4)));
+                }
+            });
+            return this;
+        }
+
+
+        //加入购物车
+        $('#add_shopping').click(function () {
+            let usnames = getCookie('name');
+            console.log(usnames);
+            let collocation = $('#btnbox1 .active').text();
+            let standard = $('#btnbox2 .active').text();
+
+            if (usnames) {
+                $.ajax({
+                    type: 'post',
+                    url: '../api/goods.php',
+                    data: {
+                        'name': usnames,
+                        'gid': getCookie('id'),
+                        'collocation': collocation,
+                        'num': $('#num').val(),
+                        'standard': standard,
+                        'a': 2
+                    },
+                    success: function (str) {
+                        let arr = JSON.parse(str);
+                        console.log(str);
+                        let sumNum = arr.sum[0]["SUM(num)"];
+                        console.log(sumNum);
+                        if (arr.message == 1) {
+                            $('.car_shop').shake(4, 10, 400);
+                            $('#numshop').html(sumNum);
+                        }
+                    }
+                })
+            } else {
+                $('.tishi').show();
+            }
+        })
+
+        //购物车点击跳转
+        $('.car_shop').click(function () {
+            location.href = 'buycar.html';
+        })
+        $('.carrr').click(function () {
+            location.href = 'buycar.html';
+        })
+
+
+
+
+        //link假数据
+        let link = [{
+            dt: '关于健客',
+            dd: ['健客简介', '资质荣誉', '加入我们', '联系我们', '广告合作']
+        }, {
+            dt: '支付配送方式',
+            dd: ['货到付款', '第三方网上支付', '免费退换', '配送范围和收费', '商品签收注意']
+        }, {
+            dt: '帮助中心',
+            dd: ['购物指南', '订单处理', '退换原则', '退换方式', '电话查真伪']
+        }]
+
+        let link_html = link.map(function (item) {
+            let dl_html = item.dd.map(function (item1) {
+                return `<dd>${item1}</dd>`
+            }).join('');
+            return `<dl>
+                            <dt>${item.dt}</dt>
+                            ${dl_html}
+                        </dl>`
+        }).join('');
+        $('.foot_boxleft').html(link_html);
+
+
+        let cellphone = ['手机平台', '健客医生', '健客网上药店', '手机糖宝', '健客问医生', '男人加油站', '护肤小贴士', '健客微商城'];
+        let cellphone_html = cellphone.map(function (item) {
+            return `<li>
+                            <em></em>
+                            <span>${item}</span>
+                        </li>`
+        }).join('');
+        $('.cellphone_platform').html(cellphone_html);
+
+
+        let attention = ['关注我们', '微博', 'QQ空间', '微信'];
+        let attention_html = attention.map(function (item) {
+            return `<li>
+                            <em></em>
+                            <span>${item}</span>
+                        </li>`
+        }).join('');
+        $('.attention').html(attention_html);
+
+
+    })();
+</script>
+<script>
+    $(function () {
+        $(".zuhe li").mouseover(
+            function () {
+                var index = $(this).index(); //不传递参数，返回这个元素在同辈中的索引位置
+                $(this).addClass("act").siblings()
+                    .removeClass("act");
+                $(".do .productcxsp").eq(index).show()
+                    .siblings().hide();
+            });
+    })
+</script>
+<script>
+    $(".qbpj li").click(function () {
+        $(this).addClass('act').siblings().removeClass('act');
+        var index = $(this).index();
+        $(".pjtext .pj-main").eq(index).show().siblings().hide();
+    });
+    $(".prems .huifu").toggle(function () {
+        $(this).parent().next(".o-hfmain").show();
+    }, function () {
+        $(this).parent().next(".o-hfmain").hide();
+    });
+
+    $(".prems .tareply .btn-toggle").toggle(function () {
+        $(this).parent().next(".tabcfc").show();
+    }, function () {
+
+        $(this).parent().next(".tabcfc").hide();
+    });
+</script>
+<script type="text/javascript">
+    $(".qbpj li").click(function () {
+        $(this).addClass('act').siblings().removeClass('act');
+        var index = $(this).index();
+        $(".pjtext .pj-main").eq(index).show().siblings().hide();
+    });
+    $(".prems .huifu").toggle(function () {
+        $(this).parent().next(".o-hfmain").show();
+    }, function () {
+        $(this).parent().next(".o-hfmain").hide();
+    });
+
+    $(".prems .tareply .btn-toggle").toggle(function () {
+        $(this).parent().next(".tabcfc").show();
+    }, function () {
+
+        $(this).parent().next(".tabcfc").hide();
+    });
+</script>
+<script>
+    $(function () {
+        $(".brandlogo").find('li:gt(8)').css("margin-bottom", "0");
+    })
+</script>
+<script type="text/javascript">
+    $(function () {
+        var scroll = "false";
+        if (scroll == "true") {
+            $('body,html').scrollTop(0);
+        }
+    });
+
+    function toPage(obj) {
+        var total = Number("44");
+
+        total = parseInt(total);
+        var p = $.trim($(obj).prev("#pageNumText").val());
+        p = Number(p);
+        //		alert(33);
+        //		debugger;
+        if (!p || isNaN(p) || p > total) {
+            return;
+        }
+        if (!/^[0-9]*[1-9][0-9]*$/.test(p)) {
+            return;
+        }
+        clickPageNum('', 'p=' + p);
+    }
+    //
+</script>

@@ -1,0 +1,1032 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    user-select: none
+}
+
+body {
+    width: 100%
+}
+
+.content {
+    width: 980px;
+    margin: auto
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden
+}
+
+.fix_ul {
+    position: fixed;
+    width: 60px;
+    right: 1%;
+    top: 50%
+}
+
+.fix_ul li {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 2px
+}
+
+.fix_ul li .close_top {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .6);
+    font-size: 12px;
+    line-height: 60px;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    transition: background .3s ease
+}
+
+.fix_ul li .close_top:hover {
+    background: #000
+}
+
+.fix_ul .saoma {
+    width: 100%;
+    height: 100%;
+    position: relative
+}
+
+.fix_ul .saoma:hover .hide {
+    display: block
+}
+
+.fix_ul .saoma img {
+    display: block
+}
+
+.fix_ul .saoma .hide {
+    width: 185px;
+    height: 200px;
+    border: 1px solid #ccc;
+    position: absolute;
+    left: -325%;
+    top: 0;
+    display: none
+}
+
+.fix_ul .saoma .hide img {
+    margin: auto;
+    padding-top: 17.5px
+}
+
+.fix_ul .car_shop {
+    width: 60px;
+    height: 75px;
+    background: #ececec;
+    position: relative;
+    cursor: pointer
+}
+
+.fix_ul .car_shop:hover em {
+    background: #e4393c;
+    color: #fff
+}
+
+.fix_ul .car_shop em {
+    content: "0";
+    display: block;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #e4393c;
+    background: #ececec;
+    font-size: 12px;
+    color: #e4393c;
+    line-height: 18px;
+    text-align: center;
+    border-radius: 10px;
+    position: absolute;
+    right: 15%;
+    top: 8%;
+    font-style: normal
+}
+
+.fix_ul .car_shop i {
+    display: block;
+    width: 34px;
+    height: 30px;
+    margin: auto;
+    text-align: center;
+    line-height: 30px;
+    font-size: 30px;
+    padding-top: 15px;
+    color: #888
+}
+
+.fix_ul .car_shop span {
+    font-size: 12px;
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin-top: 16px;
+    cursor: pointer;
+    color: #888
+}
+
+.tishi {
+    width: 468px;
+    height: 124px;
+    border: 1px solid #ccc;
+    position: fixed;
+    transform: translate(110%, 270%);
+    background: #fff;
+    z-index: 9999;
+    display: none
+}
+
+.tishi .top_pp {
+    height: 30px;
+    width: 100%;
+    padding: 0 10px;
+    background: #0374d4
+}
+
+.tishi .top_pp span {
+    font-size: 12px;
+    line-height: 30px;
+    color: #fff
+}
+
+.tishi .top_pp .close {
+    float: right;
+    cursor: pointer
+}
+
+.tishi div {
+    width: 100%;
+    height: calc(100% - 30px);
+    padding: 10px 23px
+}
+
+.tishi div p {
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 20px
+}
+
+.tishi div button {
+    width: 55px;
+    height: 25px;
+    margin-right: 10px;
+    font-size: 12px;
+    margin-left: 35%
+}
+
+.tishi div input {
+    width: 55px;
+    height: 25px;
+    font-size: 12px
+}
+
+.top_head {
+    height: 36px;
+    width: 100%;
+    background: #f5f5f5
+}
+
+.top_login {
+    width: 404px;
+    height: 100%;
+    float: left
+}
+
+.top_login span {
+    line-height: 36px;
+    color: #000;
+    font-size: 12px;
+    margin-right: 28px
+}
+
+.top_login a {
+    display: inline-block;
+    height: 100%;
+    margin-right: 24px;
+    color: #000;
+    font-size: 12px;
+    line-height: 36px
+}
+
+.top_nav {
+    height: 100%;
+    float: right
+}
+
+.top_nav li {
+    float: left;
+    height: 100%;
+    line-height: 36px;
+    font-size: 12px;
+    position: relative;
+    border-left: 1px solid #f5f5f5;
+    border-right: 1px solid #f5f5f5
+}
+
+.top_nav li a {
+    display: block;
+    height: 100%;
+    color: #000
+}
+
+.top_nav li i {
+    position: absolute;
+    top: 1%;
+    left: 73%
+}
+
+.top_nav li:nth-child(4) i {
+    position: absolute;
+    top: 1%;
+    left: -1%
+}
+
+.top_nav li:nth-child(5) i {
+    position: absolute;
+    top: 1%;
+    left: 10%
+}
+
+.top_nav li:nth-child(6) i {
+    position: absolute;
+    top: 1%;
+    left: 10%
+}
+
+.top_nav2 {
+    width: 104%;
+    position: absolute;
+    top: 98%;
+    left: -2%;
+    z-index: 99;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    display: none
+}
+
+.top_nav2 li {
+    width: 100%;
+    padding: 0 4px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px
+}
+
+.top_nav>li:hover {
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    background: #fff
+}
+
+.top_nav>li:hover .top_nav2 {
+    display: block
+}
+
+.top_nav2 li:hover {
+    color: #00f
+}
+
+.list {
+    width: 968px;
+    height: 228px;
+    padding: 22px 16px;
+    background: #fff;
+    position: absolute;
+    right: -2%;
+    top: 100%;
+    border: 1px solid #ccc;
+    border-top: none;
+    display: none;
+    z-index: 99
+}
+
+.daohang {
+    position: relative
+}
+
+.daohang:hover .list {
+    display: block
+}
+
+.list dl {
+    float: left
+}
+
+.list dl dt {
+    font-size: 18px;
+    color: #00f
+}
+
+.list dl span {
+    display: inline-block;
+    width: 48px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    cursor: pointer;
+    margin-right: 16px
+}
+
+.list .zixun {
+    width: 40%;
+    border-right: 1px solid #ccc
+}
+
+.list .pindao {
+    width: 25%;
+    border-right: 1px solid #ccc;
+    padding: 0 16px
+}
+
+.list .fuwu {
+    width: 17.5%;
+    border-right: 1px solid #ccc;
+    padding: 0 16px
+}
+
+.list .shangcheng {
+    padding: 0 16px;
+    width: 17.5%
+}
+
+.list dl span:hover {
+    background: #1c95d2;
+    color: #fff
+}
+
+.top_search {
+    height: 128px;
+    padding: 8px 0 24px 0;
+    position: relative
+}
+
+.top_search .logo {
+    float: left;
+    margin-left: 40px
+}
+
+.top_search .search {
+    float: left;
+    position: relative;
+    margin-right: 80px
+}
+
+.top_search .search input {
+    width: 414px;
+    height: 40px;
+    margin-top: 32px;
+    border: 2px solid #00f;
+    text-indent: 10px;
+    font-size: 16px
+}
+
+.top_search .search .search_sou {
+    width: 99px;
+    height: 40px;
+    display: block;
+    background: #00f;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    position: absolute;
+    right: -9.5%;
+    top: 44%
+}
+
+.top_search .search ul {
+    position: absolute;
+    bottom: -24%
+}
+
+.top_search .search ul li {
+    float: left;
+    font-size: 12px;
+    line-height: 12px;
+    padding: 0 10px;
+    cursor: pointer
+}
+
+.top_search .wuliu {
+    float: left;
+    height: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.top_search .wuliu a {
+    display: inline-block;
+    width: 108px;
+    height: 32px;
+    border: 1px solid #ccc;
+    margin-right: 16px;
+    margin-top: 28px;
+    text-align: center;
+    line-height: 32px;
+    font-size: 12px;
+    color: #888
+}
+
+.top_search .wuliu a i {
+    margin-right: 8px;
+    color: #00f
+}
+
+.top_search .erweima {
+    float: left;
+    margin-left: 40px
+}
+
+.top_search .erweima img {
+    display: block
+}
+
+.top_list {
+    width: 100%;
+    background: #1369c0;
+    position: relative
+}
+
+.top_list .more {
+    height: 40px;
+    width: 200px;
+    background: #0f54b3;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    line-height: 40px;
+    float: left
+}
+
+.top_list .more:hover {
+    background: #4593fd
+}
+
+.top_list .list_nav {
+    float: left;
+    margin-left: 5px
+}
+
+.top_list .list_nav li {
+    float: left;
+    padding: 0 18px;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px
+}
+
+.top_list .list_nav li:hover {
+    background: #0f54b3;
+    cursor: pointer
+}
+
+.top_list img {
+    position: absolute;
+    right: 18%;
+    top: 0;
+    display: block
+}
+
+.banner_nav {
+    float: left;
+    width: 200px;
+    background: #fff;
+    position: relative;
+    left: 0;
+    top: 3%;
+    display: none;
+    z-index: 99;
+    border-bottom: 2px solid #4593fd
+}
+
+.banner_nav li {
+    padding-left: 20px;
+    height: 36px;
+    width: 100%;
+    border-right: 2px solid #4593fd;
+    border-left: 2px solid #4593fd;
+    line-height: 36px;
+    z-index: 9999999
+}
+
+.banner_nav li a {
+    display: inline-block;
+    height: 100%;
+    width: 64px;
+    color: #1c95d2;
+    font-size: 14px;
+    margin-right: 16px;
+    transition: transform .3s ease-in
+}
+
+.banner_nav li>span {
+    font-size: 12px;
+    width: 60px;
+    text-align: right;
+    display: inline-block;
+    line-height: 28.4px;
+    color: #000;
+    transition: transform .3s ease-in
+}
+
+.banner_nav li:hover .banner_more {
+    display: block
+}
+
+.banner_nav>li:hover {
+    border-top: 1px solid #1c95d2;
+    border-bottom: 1px solid #1c95d2;
+    border-right: none
+}
+
+.banner_nav>li:hover a {
+    color: #000;
+    transform: translateX(10px)
+}
+
+.banner_nav>li:hover>span {
+    color: #000;
+    transform: translateX(8px)
+}
+
+.banner_more {
+    background: #fff;
+    width: 432px;
+    position: absolute;
+    top: 0;
+    right: -216%;
+    padding: 30px;
+    display: none;
+    z-index: 9999999;
+    border-right: 1px solid #1c95d2;
+    border-bottom: 1px solid #1c95d2
+}
+
+.banner_more div {
+    border-bottom: 1px dashed #ccc
+}
+
+.banner_more div h3 {
+    font-size: 15px;
+    margin-top: 24px;
+    color: #000
+}
+
+.banner_more div>span {
+    display: inline-block;
+    padding: 0 12px;
+    line-height: 20px;
+    font-size: 12px;
+    color: #000
+}
+
+.banner_more div span:hover {
+    color: #284193;
+    cursor: pointer
+}
+
+.banner_more div img {
+    margin-top: 24px;
+    display: block
+}
+
+.img_1 {
+    width: 100%;
+    margin-top: 20px
+}
+
+.img_1 img {
+    display: block;
+    width: 100%
+}
+
+.img_1 p {
+    font-size: 12px;
+    color: #888;
+    margin-top: 15px
+}
+
+.list_1 {
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 20px
+}
+
+.list_1 li {
+    float: left;
+    font-size: 12px;
+    padding: 0 2px;
+    cursor: pointer
+}
+
+.goods {
+    width: 100%
+}
+
+.goods .good_left {
+    width: 325px;
+    height: 503px;
+    float: left;
+    position: relative
+}
+
+.goods .good_left .pic_box {
+    width: 325px;
+    height: 402px;
+    border: 1px solid #ccc
+}
+
+.goods .good_left .pic_box .b_imgbox {
+    width: 323px;
+    height: 320px
+}
+
+.goods .good_left .pic_box .b_imgbox #b_pic {
+    width: 323px;
+    height: 320px;
+    display: block
+}
+
+.goods .good_left .pic_box .b_imgbox .zhezhao {
+    width: 100px;
+    height: 100px;
+    background: #000;
+    opacity: .5;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+    cursor: move
+}
+
+.goods .good_left .pic_box .s_pic {
+    width: 100%;
+    margin-top: 10px
+}
+
+.goods .good_left .pic_box .s_pic li {
+    float: left;
+    border: 1px solid #ccc;
+    width: 50px;
+    height: 50px;
+    margin: 0 10px
+}
+
+.goods .good_left .pic_box .s_pic li #small_pic {
+    width: 100%;
+    height: 100%;
+    display: block
+}
+
+.goods .good_left .hidden_box {
+    height: 402px;
+    width: 350px;
+    border: 1px solid #ccc;
+    position: absolute;
+    right: -110%;
+    top: 0;
+    display: none;
+    overflow: hidden;
+    z-index: 1
+}
+
+.goods .good_left .hidden_box img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 180%;
+    display: block
+}
+
+.goods .good_left .title {
+    color: #666;
+    line-height: 20px;
+    border: #ddd 1px solid;
+    border-top: none;
+    padding: 5px;
+    font-size: 12px
+}
+
+.goods .good_left .title span {
+    font-size: 12px;
+    color: red
+}
+
+.goods .good_left .addmore {
+    width: 90px;
+    height: 30px;
+    border: 1px solid #ccc;
+    line-height: 30px;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 10px;
+    cursor: pointer;
+    background-image: url(../img/add1.png);
+    background-repeat: no-repeat;
+    background-position: 5px 9px;
+    text-indent: 9px
+}
+
+.goods .good_right {
+    width: 630px;
+    float: right;
+    position: relative
+}
+
+.goods .good_right .right_h3 {
+    width: 520px;
+    height: 30px;
+    font-size: 18px;
+    color: #222
+}
+
+.goods .good_right .right_h3 h3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.goods .good_right .right_h3 i {
+    float: right
+}
+
+.goods .good_right .p_div {
+    position: relative;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    border-bottom: 1px dashed #ddd;
+    font-size: 12px;
+    margin-top: 10px
+}
+
+.goods .good_right .down {
+    width: 100%
+}
+
+.goods .good_right .down span {
+    color: red
+}
+
+.goods .good_right .dl_div {
+    width: 100%;
+    line-height: 24px
+}
+
+.goods .good_right .dl_div span {
+    font-size: 12px;
+    display: inline-block;
+    margin-right: 15px
+}
+
+.goods .good_right .dl_div p {
+    display: inline-block;
+    font-size: 12px
+}
+
+.goods .good_right .dl_div .price {
+    color: red;
+    font-size: 20px
+}
+
+.goods .good_right .dl_div a {
+    display: inline-block;
+    font-size: 12px
+}
+
+.goods .good_right .con_div {
+    width: 100%;
+    margin-top: 5px
+}
+
+.goods .good_right .con_div span {
+    font-size: 12px;
+    margin-right: 15px;
+    display: inline-block;
+    height: 25px;
+    vertical-align: top
+}
+
+.goods .good_right .con_div .a_box {
+    width: 440px;
+    display: inline-block;
+    vertical-align: top
+}
+
+.goods .good_right .con_div .a_box a {
+    display: inline-block;
+    color: #666;
+    padding: 5px 17px 5px 16px;
+    border: 1px solid #ccc;
+    background: #f2f2f2;
+    margin-bottom: 5px;
+    font-size: 12px;
+    position: relative
+}
+
+.goods .good_right .con_div .a_box a img {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: none
+}
+
+.goods .good_right .con_div .a_box .active {
+    border: 1px solid #e4393c;
+    background: #fff
+}
+
+.goods .good_right .dapei {
+    width: 100%;
+    margin-top: 5px
+}
+
+.goods .good_right .dapei span {
+    font-size: 12px;
+    margin-right: 15px;
+    display: inline-block;
+    height: 25px;
+    vertical-align: top
+}
+
+.goods .good_right .dapei .a_box {
+    width: 440px;
+    display: inline-block;
+    vertical-align: top
+}
+
+.goods .good_right .dapei .a_box a {
+    display: inline-block;
+    color: #666;
+    padding: 5px 17px 5px 16px;
+    border: 1px solid #ccc;
+    background-color: #f2f2f2;
+    margin-bottom: 5px;
+    font-size: 12px;
+    position: relative
+}
+
+.goods .good_right .dapei .a_box a img {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: none
+}
+
+.goods .good_right .dapei .a_box .active {
+    border: 1px solid #e4393c;
+    background: #fff
+}
+
+.goods .good_right .changjia {
+    width: 100%
+}
+
+.goods .good_right .changjia span {
+    font-size: 12px;
+    margin-right: 15px;
+    display: inline-block;
+    height: 25px
+}
+
+.goods .good_right .changjia p {
+    font-size: 12px;
+    margin-right: 15px;
+    display: inline-block;
+    height: 25px;
+    color: #999
+}
+
+.goods .good_right .btn_box {
+    width: 100%;
+    position: relative
+}
+
+.goods .good_right .btn_box span {
+    font-size: 12px;
+    margin-right: 15px;
+    display: inline-block;
+    height: 25px
+}
+
+.goods .good_right .btn_box input {
+    width: 56px;
+    height: 32px;
+    text-align: center;
+    vertical-align: middle
+}
+
+.goods .good_right .btn_box #add {
+    display: inline-block;
+    width: 27px;
+    height: 15px;
+    background: linear-gradient(#fff, #f2f2f2, #f0f0f0);
+    color: #000;
+    text-align: center;
+    line-height: 15px;
+    position: absolute;
+    left: 21%;
+    top: -5%
+}
+
+.goods .good_right .btn_box #jian {
+    display: inline-block;
+    color: #000;
+    text-align: center;
+    line-height: 15px;
+    width: 27px;
+    height: 15px;
+    background: linear-gradient(#fff, #f2f2f2, #f0f0f0);
+    position: absolute;
+    left: 21%;
+    top: 20%
+}
+
+.goods .good_right .btn_box .inf {
+    margin-left: 50px;
+    vertical-align: middle
+}
+
+.goods .good_right .btn_box .btn_3 {
+    width: 100%;
+    margin-top: 15px;
+    position: relative
+}
+
+.goods .good_right .btn_box .btn_3 #add_shopping {
+    display: inline-block;
+    width: 169px;
+    height: 40px;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    background: #0374d4;
+    margin-right: 10px
+}
+
+.goods .good_right .btn_box .btn_3 #consult {
+    display: inline-block;
+    width: 169px;
+    height: 40px;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    background: #b60b0b;
+    margin-right: 10px
+}
+
+.goods .good_right .btn_box .btn_3 .tel_box {
+    width: 260px;
+    height: 38px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+.goods .good_right .btn_box .btn_3 .tel_box input {
+    height: 100%;
+    width: 135px;
+    border: 1px solid #0f54b3;
+    vertical-align: middle;
+    text-indent: 2px;
+    font-size: 12px
+}
+
+.goods .good_right .btn_box .btn_3 .tel_box #callback {
+    display: inline-block;
+    height: 100%;
+    width: 118px;
+    background: #0f54b3;
+    color: #fff;
+    line-height: 38px;
+    text-align: center;
+    vertical-align: middle;
+    margin-left: -5px
+}
+
+.goods .good_right .xuangua {
+    position: absolute;
+    right: -15%;
+    top: 20%
+}
