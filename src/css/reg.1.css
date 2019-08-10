@@ -1,0 +1,242 @@
+body,
+html {
+    width: 100%;
+    position: relative
+}
+
+.reg_box {
+    width: 100%;
+    background: url(../img/regbg.jpg);
+    background-repeat: no-repeat
+}
+
+.content {
+    width: 980px;
+    margin: auto;
+    background: #fff
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    overflow: hidden
+}
+
+.head {
+    margin: 0 auto;
+    width: 940px;
+    padding: 50px 20px 20px;
+    user-select: none
+}
+
+.head img {
+    display: block;
+    float: left
+}
+
+.head div {
+    float: right
+}
+
+.head div span {
+    font-size: 12px;
+    color: #fff
+}
+
+.head div a {
+    display: inline-block;
+    width: 30px;
+    height: 22px;
+    font-size: 13px;
+    color: #00f;
+    line-height: 22px;
+    text-align: center;
+    background: #fff;
+    border: 1px solid#ccc
+}
+
+.font {
+    width: 100%;
+    height: 620px;
+    user-select: none
+}
+
+.font_box {
+    padding-bottom: 50px;
+    float: left;
+    width: 700px;
+}
+
+
+.input_box {
+    width: 100%;
+    margin-left: 30px;
+}
+
+.input_box p {
+    width: 100%;
+    height: 45px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.input_box p .label {
+    display: inline-block;
+    line-height: 45px;
+    font-size: 12px;
+    width: 60px;
+    text-align: right;
+    vertical-align: top
+}
+
+.input_box p input {
+    display: inline-block;
+    font-size: 12px;
+    margin-left: 10px;
+    width: 352px;
+    height: 35px;
+    text-indent: 10px;
+    border: 1px solid #ccc
+}
+
+form {
+    width: 690px
+}
+
+.input_box p a {
+    width: 36px;
+    height: 45px;
+    font-size: 12px;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 22.5px;
+    color: #d70c19;
+}
+
+.yanzheng {
+    width: 125px;
+    height: 35px;
+    border: 1px solid #000;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 43px
+}
+
+#repetition {
+    width: 181px;
+    height: 35px;
+    vertical-align: middle
+}
+
+#note {
+    width: 206px;
+    margin-left: 10px;
+    vertical-align: middle
+}
+
+.suiji {
+    display: inline-block;
+    width: 141px;
+    border: 1px solid #ff4500;
+    height: 45px;
+    vertical-align: middle;
+    font-size: 12px;
+    text-align: center;
+    line-height: 43px;
+    color: #ff4500;
+    cursor: pointer;
+    background: #fff
+}
+
+.firm {
+    width: 360px;
+    padding-left: 100px;
+    padding-top: 20px
+}
+
+#btn {
+    display: inline-block;
+    width: 360px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 20px;
+    font-weight: 500;
+    background-color: #d70c19;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    border-radius: 4px;
+    outline: 0;
+    border: none
+}
+
+.agree {
+    margin-left: 100px;
+    font-size: 12px;
+    margin-top: 15px
+}
+
+.agree input {
+    vertical-align: middle
+}
+
+.agree span {
+    vertical-align: middle
+}
+
+.agree a {
+    vertical-align: middle;
+    color: #32a1e8
+}
+
+.mess {
+    margin-left: 115px;
+    margin-top: 10px;
+    color: red;
+    font-size: 12px
+}
+
+.inf {
+    display: inline-block;
+    height: 45px;
+    line-height: 45px;
+    width: 80px;
+    font-size: 12px;
+    text-align: center;
+    vertical-align: middle
+}
+
+.success {
+    width: 500px;
+    height: 200px;
+    background: #fff;
+    box-shadow: 2px 2px 10px #ccc;
+    position: absolute;
+    left: 34%;
+    top: 34%;
+    display: none
+}
+
+.success h3 {
+    text-align: center;
+    padding: 40px 0;
+    position: relative
+}
+
+.success div {
+    margin: auto;
+    width: 50px;
+    padding: 20px 0
+}
+
+.success span {
+    font-size: 20px;
+    position: absolute;
+    right: 2%;
+    top: 1%;
+    cursor: pointer
+}
